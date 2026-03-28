@@ -268,38 +268,49 @@
             th { padding: 10px 10px; font-size: 0.8rem; }
             td { padding: 10px 10px; font-size: 0.82rem; }
 
-            /* Height visual: switch to horizontal bars on mobile */
+            /* Height visual: compact row layout on mobile */
             .height-visual {
                 flex-direction: column;
                 align-items: stretch;
-                gap: 12px;
-                padding: 20px 16px;
+                gap: 0;
+                padding: 0;
+                background: none;
+                box-shadow: none;
+                border-radius: 0;
             }
             .height-bar {
                 flex-direction: row;
                 align-items: center;
-                gap: 12px;
+                gap: 0;
+                background: white;
+                border-bottom: 1px solid #e8e8e8;
+                padding: 10px 14px;
             }
+            .height-bar:first-child { border-radius: 14px 14px 0 0; }
+            .height-bar:last-child { border-radius: 0 0 14px 14px; border-bottom: none; }
             .height-bar .bar {
-                height: 36px !important;
+                height: 32px !important;
                 border-radius: 6px;
-                min-width: 40px;
+                min-width: 0;
+                flex-shrink: 0;
             }
-            .height-bar:nth-child(1) .bar { width: 20% !important; }
-            .height-bar:nth-child(2) .bar { width: 35% !important; }
-            .height-bar:nth-child(3) .bar { width: 55% !important; }
-            .height-bar:nth-child(4) .bar { width: 70% !important; }
-            .height-bar:nth-child(5) .bar { width: 90% !important; }
+            .height-bar:nth-child(1) .bar { width: 32px !important; }
+            .height-bar:nth-child(2) .bar { width: 44px !important; }
+            .height-bar:nth-child(3) .bar { width: 60px !important; }
+            .height-bar:nth-child(4) .bar { width: 76px !important; }
+            .height-bar:nth-child(5) .bar { width: 96px !important; }
             .height-bar .inches {
                 position: static;
                 color: white;
-                line-height: 36px;
-                padding: 0 10px;
+                line-height: 32px;
+                padding: 0 8px;
+                font-size: 0.8rem;
             }
             .height-bar .label {
                 text-align: left;
-                font-size: 0.75rem;
+                font-size: 0.82rem;
                 white-space: nowrap;
+                margin-left: 12px;
             }
             .height-bar .label br { display: none; }
             .cs-grid { grid-template-columns: 1fr; }
@@ -854,7 +865,7 @@
                 <h3>Peak Performance</h3>
                 <ul>
                     <li><strong>Mowing:</strong> Continue every 4&ndash;5 days at 1&ndash;2". Bermuda <em>thrives</em> in summer heat &mdash; this is when it looks its best.</li>
-                    <li><strong>Fertilize (July 4th):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. Milorganite is a great organic option &mdash; it won't burn in the heat.</li>
+                    <li><strong>Fertilize (July 4th):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> is a great organic option &mdash; it won't burn in the heat.</li>
                     <li><strong>Potassium boost:</strong> If your soil test showed low K, apply <strong>0.5 lb potash (K2O) per 1,000 sq ft</strong> to build heat and drought tolerance.</li>
                     <li><strong>Water deeply</strong> if rainfall is insufficient. Bermuda is drought-tolerant but performs best with consistent moisture.</li>
                 </ul>
@@ -956,7 +967,7 @@
                 <strong>Formula:</strong> Pounds of product = Desired N &divide; (N% on bag &divide; 100)<br><br>
                 <strong>Example with a 32-0-10 fertilizer:</strong><br>
                 To apply 1 lb of actual N: &nbsp; 1 &divide; 0.32 = <strong>3.125 lbs of product per 1,000 sq ft</strong><br><br>
-                <strong>Example with Milorganite 6-4-0:</strong><br>
+                <strong>Example with <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> 6-4-0:</strong><br>
                 To apply 1 lb of actual N: &nbsp; 1 &divide; 0.06 = <strong>16.7 lbs of product per 1,000 sq ft</strong> (about 1/3 of a standard 32 lb bag)
             </div>
             <p>Always check the bag label &mdash; many products list the spreader setting and coverage area for you.</p>
@@ -972,7 +983,7 @@
                         <li>Lower burn risk, even in heat</li>
                         <li>More even growth (less mowing surge)</li>
                         <li>Look for: "slow-release," "controlled-release," "coated urea," or "sulfur-coated"</li>
-                        <li>Examples: Milorganite, Scotts Turf Builder</li>
+                        <li>Examples: <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a>, <a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Turf Builder</a></li>
                     </ul>
                 </div>
                 <div>
@@ -982,7 +993,7 @@
                         <li>Higher burn risk if over-applied or in heat</li>
                         <li>Causes a surge of growth (more mowing)</li>
                         <li>Best used sparingly or in cooler temps</li>
-                        <li>Examples: urea (46-0-0), ammonium sulfate (21-0-0)</li>
+                        <li>Examples: urea (46-0-0), <a href="https://www.homedepot.com/p/15-lbs-3500-sq-ft-Ammonium-Sulfate-Dry-Lawn-Fertilizer-21-0-0-904498/315672654" target="_blank" style="color:inherit; text-decoration:underline;">ammonium sulfate</a> (21-0-0)</li>
                     </ul>
                 </div>
             </div>
@@ -1004,8 +1015,8 @@
                     <tr>
                         <td><strong>Late April</strong><br><span style="font-size:0.8rem;color:#78909c;">Lawn 50%+ green</span></td>
                         <td>
-                            <strong>Scotts Turf Builder Southern</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">32-0-10</span><br>
-                            <span style="font-size:0.82rem;color:#78909c;">or Pennington Ultragreen <strong>30-0-4</strong></span><br>
+                            <strong><a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Turf Builder Southern</a></strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">32-0-10</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or <a href="https://www.homedepot.com/p/Pennington-Ultragreen-14-lb-5-000-sq-ft-Lawn-Fertilizer-30-0-4-with-Heat-Resistency-100536576/312265378" target="_blank" style="color:inherit; text-decoration:underline;">Pennington Ultragreen</a> <strong>30-0-4</strong></span><br>
                             <span style="font-size:0.82rem;color:#78909c;">or Lesco <strong>24-0-11</strong></span>
                         </td>
                         <td>~3 lbs product<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span></td>
@@ -1014,29 +1025,29 @@
                     <tr>
                         <td><strong>Late May</strong><br><span style="font-size:0.8rem;color:#78909c;">Memorial Day</span></td>
                         <td>
-                            <strong>Milorganite</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
-                            <span style="font-size:0.82rem;color:#78909c;">or Scotts Southern <strong>32-0-10</strong></span><br>
+                            <strong><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a></strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or <a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Southern</a> <strong>32-0-10</strong></span><br>
                             <span style="font-size:0.82rem;color:#78909c;">or Simple Lawn Solutions <strong>28-0-0</strong></span>
                         </td>
-                        <td>~16 lbs Milorganite<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span><br><span style="font-size:0.8rem;color:#78909c;">or ~3 lbs of 32-0-10</span></td>
-                        <td>Main spring feeding. Bermuda is growing fast now. Milorganite is gentle and adds iron for extra green color.</td>
+                        <td>~16 lbs <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a><br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span><br><span style="font-size:0.8rem;color:#78909c;">or ~3 lbs of 32-0-10</span></td>
+                        <td>Main spring feeding. Bermuda is growing fast now. <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> is gentle and adds iron for extra green color.</td>
                     </tr>
                     <tr>
                         <td><strong>Late June</strong></td>
                         <td>
-                            <strong>Milorganite</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
+                            <strong><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a></strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
                             <span style="font-size:0.82rem;color:#78909c;">or Carbon X <strong>24-0-4</strong></span><br>
-                            <span style="font-size:0.82rem;color:#78909c;">or ammonium sulfate <strong>21-0-0</strong></span>
+                            <span style="font-size:0.82rem;color:#78909c;">or <a href="https://www.homedepot.com/p/15-lbs-3500-sq-ft-Ammonium-Sulfate-Dry-Lawn-Fertilizer-21-0-0-904498/315672654" target="_blank" style="color:inherit; text-decoration:underline;">ammonium sulfate</a> <strong>21-0-0</strong></span>
                         </td>
-                        <td>~16 lbs Milorganite<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span><br><span style="font-size:0.8rem;color:#78909c;">or ~4.5 lbs of 21-0-0</span></td>
-                        <td>Peak growth season &amp; peak heat. Organic (Milorganite) is safest &mdash; zero burn risk. Ammonium sulfate (21-0-0) is cheap and also lowers pH, which Bermuda likes.</td>
+                        <td>~16 lbs <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a><br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span><br><span style="font-size:0.8rem;color:#78909c;">or ~4.5 lbs of 21-0-0</span></td>
+                        <td>Peak growth season &amp; peak heat. Organic (<a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a>) is safest &mdash; zero burn risk. <a href="https://www.homedepot.com/p/15-lbs-3500-sq-ft-Ammonium-Sulfate-Dry-Lawn-Fertilizer-21-0-0-904498/315672654" target="_blank" style="color:inherit; text-decoration:underline;">Ammonium sulfate</a> (21-0-0) is cheap and also lowers pH, which Bermuda likes.</td>
                     </tr>
                     <tr style="background: #fff8e1;">
                         <td><strong>Early July</strong><br><span style="font-size:0.8rem;color:#78909c;">July 4th</span></td>
                         <td>
                             <strong>Lesco</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">24-0-11</span><br>
-                            <span style="font-size:0.82rem;color:#78909c;">or Scotts Southern <strong>32-0-10</strong></span><br>
-                            <span style="font-size:0.82rem;color:#78909c;">or Milorganite <strong>6-4-0</strong> + muriate of potash <strong>0-0-60</strong></span>
+                            <span style="font-size:0.82rem;color:#78909c;">or <a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Southern</a> <strong>32-0-10</strong></span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> <strong>6-4-0</strong> + <a href="https://www.homedepot.com/p/Sunshine-Harvest-Potash-12-lbs-Shaker-Jug-NPK-0-0-60-PO-12SJ/325909674" target="_blank" style="color:inherit; text-decoration:underline;">muriate of potash</a> <strong>0-0-60</strong></span>
                         </td>
                         <td>~4 lbs of 24-0-11<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb N + 0.44 lb K)</span></td>
                         <td>Bermuda's prime time. Pick a product with potassium (the last number) to start building stress &amp; heat tolerance. The 24-0-11 and 32-0-10 both include K.</td>
@@ -1044,16 +1055,16 @@
                     <tr>
                         <td><strong>Early August</strong><br><span style="font-size:0.8rem;color:#78909c;">Last N feeding!</span></td>
                         <td>
-                            <strong>Milorganite</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
+                            <strong><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a></strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
                             <span style="font-size:0.82rem;color:#78909c;">or any slow-release like <strong>29-0-5</strong> or <strong>30-0-4</strong></span>
                         </td>
-                        <td>~8 lbs Milorganite<br><span style="font-size:0.8rem;color:#78909c;">(= ~0.5 lb actual N)</span></td>
-                        <td><strong>Final nitrogen of the year.</strong> Go lighter (0.5 lb N). Must be at least 6 weeks before your first expected frost date. Milorganite is ideal &mdash; slow release won't push late-season growth.</td>
+                        <td>~8 lbs <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a><br><span style="font-size:0.8rem;color:#78909c;">(= ~0.5 lb actual N)</span></td>
+                        <td><strong>Final nitrogen of the year.</strong> Go lighter (0.5 lb N). Must be at least 6 weeks before your first expected frost date. <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> is ideal &mdash; slow release won't push late-season growth.</td>
                     </tr>
                     <tr>
                         <td><strong>September</strong><br><span style="font-size:0.8rem;color:#78909c;">Labor Day</span></td>
                         <td>
-                            <strong>Muriate of potash</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">0-0-60</span><br>
+                            <strong><a href="https://www.homedepot.com/p/Sunshine-Harvest-Potash-12-lbs-Shaker-Jug-NPK-0-0-60-PO-12SJ/325909674" target="_blank" style="color:inherit; text-decoration:underline;">Muriate of potash</a></strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">0-0-60</span><br>
                             <span style="font-size:0.82rem;color:#78909c;">or sulfate of potash <strong>0-0-50</strong></span><br>
                             <span style="font-size:0.82rem;color:#78909c;">NO nitrogen products!</span>
                         </td>
@@ -1087,13 +1098,13 @@
             <ul>
                 <li><strong>pH level:</strong> Bermuda prefers <strong>6.0&ndash;7.0</strong>. If soil is too acidic, add lime. Too alkaline, add sulfur.</li>
                 <li><strong>Phosphorus &amp; Potassium levels:</strong> You may not need P at all, saving money and preventing runoff.</li>
-                <li><strong>Micronutrient deficiencies:</strong> Iron deficiency is common in Bermuda and causes yellowing even when N is sufficient. An iron supplement (like Ironite or ferrous sulfate) gives a quick dark green boost without extra growth.</li>
+                <li><strong>Micronutrient deficiencies:</strong> Iron deficiency is common in Bermuda and causes yellowing even when N is sufficient. An iron supplement (like <a href="https://www.homedepot.com/p/Ironite-15-lb-5-000-sq-ft-Dry-Lawn-and-Garden-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-1-0-0-100544883/317814846" target="_blank" style="color:inherit; text-decoration:underline;">Ironite</a> or <a href="https://www.amazon.com/Hi-yield-32340-Iron-Sulfate-Sq-ft/dp/B07CRNTR7G" target="_blank" style="color:inherit; text-decoration:underline;">ferrous sulfate</a>) gives a quick dark green boost without extra growth.</li>
             </ul>
             <p style="margin-top:10px;">Test in <strong>early spring</strong> or <strong>late summer</strong>. Results take 1&ndash;2 weeks. Most extension offices provide specific fertilizer recommendations with the results.</p>
         </div>
 
         <div class="highlight tip">
-            <strong>Iron for Color Without Growth:</strong> Want your Bermuda darker green without pushing extra growth? Apply <strong>ferrous sulfate</strong> or a chelated iron product. It deepens color within days without adding nitrogen. Great for a quick visual boost between fertilizer applications. Apply at 2 oz per 1,000 sq ft mixed in water, or use a granular product like Ironite.
+            <strong>Iron for Color Without Growth:</strong> Want your Bermuda darker green without pushing extra growth? Apply <strong><a href="https://www.amazon.com/Hi-yield-32340-Iron-Sulfate-Sq-ft/dp/B07CRNTR7G" target="_blank" style="color:inherit; text-decoration:underline;">ferrous sulfate</a></strong> or a chelated iron product. It deepens color within days without adding nitrogen. Great for a quick visual boost between fertilizer applications. Apply at 2 oz per 1,000 sq ft mixed in water, or use a granular product like <a href="https://www.homedepot.com/p/Ironite-15-lb-5-000-sq-ft-Dry-Lawn-and-Garden-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-1-0-0-100544883/317814846" target="_blank" style="color:inherit; text-decoration:underline;">Ironite</a>.
         </div>
     </section>
 
@@ -1112,25 +1123,25 @@
 
         <div class="grid-2">
             <div class="product-card">
-                <h4>Milorganite 6-4-0</h4>
+                <h4><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> 6-4-0</h4>
                 <span class="type-tag tag-organic">Organic / Slow Release</span>
                 <p>Biosolid-based organic fertilizer. Won't burn your lawn even in summer heat. Feeds for 8&ndash;10 weeks. Perfect for Bermuda's hot-weather feedings. Use the "holiday schedule": <strong>Memorial Day, July 4th, Labor Day</strong> (but skip the Labor Day N if it's &lt;6 weeks to frost).</p>
                 <p style="margin-top:8px;"><strong>Best for:</strong> Safe summer feeding without burn risk.</p>
             </div>
             <div class="product-card">
-                <h4>Scotts Turf Builder Southern (32-0-10)</h4>
+                <h4><a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Turf Builder Southern</a> (32-0-10)</h4>
                 <span class="type-tag tag-synthetic">Synthetic / Slow Release</span>
                 <p>Specifically formulated for warm-season grasses like Bermuda. Higher potassium content (the "10") builds heat and drought tolerance. Apply every 6&ndash;8 weeks during the growing season.</p>
                 <p style="margin-top:8px;"><strong>Best for:</strong> Bermuda-specific balanced feeding.</p>
             </div>
             <div class="product-card">
-                <h4>Prodiamine 65 WDG</h4>
+                <h4><a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Prodiamine 65 WDG</a></h4>
                 <span class="type-tag tag-synthetic">Pre-Emergent Herbicide</span>
                 <p>Professional-grade pre-emergent. Prevents crabgrass, goosegrass, and Poa annua. One application lasts 4&ndash;6 months. Apply in <strong>early spring</strong> (soil 55&deg;F) and again in <strong>early fall</strong> (for Poa annua). Very cost-effective.</p>
                 <p style="margin-top:8px;"><strong>Best for:</strong> Long-lasting weed prevention.</p>
             </div>
             <div class="product-card">
-                <h4>Celsius WG Herbicide</h4>
+                <h4><a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:inherit; text-decoration:underline;">Celsius WG</a> Herbicide</h4>
                 <span class="type-tag tag-synthetic">Post-Emergent Herbicide</span>
                 <p>One of the best post-emergent herbicides for Bermuda lawns. Safe on Bermuda even in summer heat (unlike many broadleaf killers). Kills a wide range of broadleaf and grassy weeds. Can be applied up to 95&deg;F.</p>
                 <p style="margin-top:8px;"><strong>Best for:</strong> Killing weeds in Bermuda without damaging the grass.</p>
@@ -1138,7 +1149,7 @@
         </div>
 
         <div class="highlight tip" style="margin-top: 20px;">
-            <strong>Pro Tip &mdash; Combo Approach:</strong> Many Bermuda enthusiasts use Milorganite as a "base layer" every 8 weeks for steady organic feeding, then supplement with a synthetic (like Scotts Southern) once or twice for a quick green boost. This gives you the best of both worlds: safe slow-release + visible results.
+            <strong>Pro Tip &mdash; Combo Approach:</strong> Many Bermuda enthusiasts use <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> as a "base layer" every 8 weeks for steady organic feeding, then supplement with a synthetic (like <a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Southern</a>) once or twice for a quick green boost. This gives you the best of both worlds: safe slow-release + visible results.
         </div>
     </section>
 
@@ -1378,14 +1389,14 @@
                     <p><strong>Prevent It (Best Approach):</strong></p>
                     <ul>
                         <li>Apply <strong>pre-emergent</strong> in early spring when soil hits 55&deg;F</li>
-                        <li>Products: <strong>Prodiamine 65 WDG</strong>, Scotts Halts, or Dimension (dithiopyr)</li>
+                        <li>Products: <strong><a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Prodiamine 65 WDG</a></strong>, <a href="https://www.homedepot.com/p/Scotts-Halts-Crabgrass-and-Grassy-Weed-Preventer-10-06-lbs-5-000-sq-ft-For-Use-on-Lawns-Also-Prevents-Henbit-and-Chickweed-44990A/204867898" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Halts</a>, or Dimension (dithiopyr)</li>
                         <li>A second application 6&ndash;8 weeks later extends protection</li>
                     </ul>
                 </div>
                 <div>
                     <p><strong>Kill Existing Crabgrass:</strong></p>
                     <ul>
-                        <li><strong>Quinclorac</strong> (Drive XLR8) &mdash; safe on Bermuda, kills crabgrass post-emergent</li>
+                        <li><strong><a href="https://www.amazon.com/BASF-Crabgrass-Ingredient-Quinclorac-Concentrate/dp/B0058W42QS" target="_blank" style="color:inherit; text-decoration:underline;">Quinclorac</a></strong> (<a href="https://www.amazon.com/BASF-Crabgrass-Ingredient-Quinclorac-Concentrate/dp/B0058W42QS" target="_blank" style="color:inherit; text-decoration:underline;">Drive XLR8</a>) &mdash; safe on Bermuda, kills crabgrass post-emergent</li>
                         <li>Apply when crabgrass is young (2&ndash;4 tillers). Large mature plants are harder to kill.</li>
                         <li>Add a surfactant for better adhesion</li>
                     </ul>
@@ -1417,7 +1428,7 @@
                     <p><strong>How to Fix:</strong></p>
                     <ul>
                         <li><strong>Increase nitrogen</strong> &mdash; a well-fed Bermuda lawn chokes out clover naturally</li>
-                        <li>Spot-spray with <strong>Celsius WG</strong> or any <strong>triclopyr-based herbicide</strong> (safe on Bermuda)</li>
+                        <li>Spot-spray with <strong><a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:inherit; text-decoration:underline;">Celsius WG</a></strong> or any <strong>triclopyr-based herbicide</strong> (safe on Bermuda)</li>
                         <li>Avoid 2,4-D + dicamba combos in summer heat &mdash; they can stress Bermuda above 85&deg;F</li>
                     </ul>
                 </div>
@@ -1432,7 +1443,7 @@
                     <p class="img-caption">Dandelions scattered across a lawn</p>
                 </div>
                 <div class="text-side">
-                    <p><strong>Fix:</strong> Spot-spray with <strong>Celsius WG</strong>, <strong>2,4-D broadleaf killer</strong>, or <strong>Spectracide Weed Stop</strong> when temps are 60&ndash;85&deg;F and dandelions are actively growing. They pull easily by hand too &mdash; use a dandelion puller tool to get the whole taproot. Preventing them: a thick, well-fed Bermuda lawn leaves no room for dandelion seeds to establish.</p>
+                    <p><strong>Fix:</strong> Spot-spray with <strong><a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:inherit; text-decoration:underline;">Celsius WG</a></strong>, <strong>2,4-D broadleaf killer</strong>, or <strong><a href="https://www.homedepot.com/p/Spectracide-40-oz-Weed-Stop-for-Lawns-Concentrate-Lawn-Weed-Killer-HG-96623/307431046" target="_blank" style="color:inherit; text-decoration:underline;">Spectracide Weed Stop</a></strong> when temps are 60&ndash;85&deg;F and dandelions are actively growing. They pull easily by hand too &mdash; use a dandelion puller tool to get the whole taproot. Preventing them: a thick, well-fed Bermuda lawn leaves no room for dandelion seeds to establish.</p>
                 </div>
             </div>
         </div>
@@ -1445,7 +1456,7 @@
                     <p class="img-caption">Poa annua &mdash; lighter green clumps with white seed heads</p>
                 </div>
                 <div class="text-side">
-                    <p><strong>Fix:</strong> Poa annua is Bermuda's #1 winter weed enemy. It germinates in fall when Bermuda goes dormant. <strong>Prevention is the only real solution:</strong> apply a <strong>fall pre-emergent</strong> (Prodiamine or Barricade) in September when soil temps drop to 70&deg;F. Once it's established, there's no selective herbicide that kills it without harming Bermuda. The good news: it dies on its own in summer heat.</p>
+                    <p><strong>Fix:</strong> Poa annua is Bermuda's #1 winter weed enemy. It germinates in fall when Bermuda goes dormant. <strong>Prevention is the only real solution:</strong> apply a <strong>fall pre-emergent</strong> (<a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Prodiamine</a> or <a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Barricade</a>) in September when soil temps drop to 70&deg;F. Once it's established, there's no selective herbicide that kills it without harming Bermuda. The good news: it dies on its own in summer heat.</p>
                 </div>
             </div>
         </div>
@@ -1458,7 +1469,7 @@
                     <p class="img-caption">Yellow nutsedge in a lawn &mdash; note the bright green color vs surrounding grass</p>
                 </div>
                 <div class="text-side">
-                    <p><strong>Fix:</strong> Nutsedge is NOT a grass &mdash; it's a sedge, so regular herbicides don't work. Use <strong>SedgeHammer</strong> (halosulfuron) or <strong>Dismiss</strong> (sulfentrazone). Both are safe on Bermuda. Apply when nutsedge is actively growing (summer). It spreads by underground tubers (nutlets), so persistence over 2&ndash;3 seasons may be needed to fully eliminate it.</p>
+                    <p><strong>Fix:</strong> Nutsedge is NOT a grass &mdash; it's a sedge, so regular herbicides don't work. Use <strong><a href="https://www.amazon.com/Plus-Turf-Herbicide-Surfactant-Residential/dp/B0BTKTVN76" target="_blank" style="color:inherit; text-decoration:underline;">SedgeHammer</a></strong> (halosulfuron) or <strong><a href="https://www.amazon.com/Dismiss-Turf-Herbicide/dp/B004LN33GK" target="_blank" style="color:inherit; text-decoration:underline;">Dismiss</a></strong> (sulfentrazone). Both are safe on Bermuda. Apply when nutsedge is actively growing (summer). It spreads by underground tubers (nutlets), so persistence over 2&ndash;3 seasons may be needed to fully eliminate it.</p>
                 </div>
             </div>
         </div>
@@ -1494,9 +1505,9 @@
                 <div>
                     <p><strong>Fixes:</strong></p>
                     <ul>
-                        <li><strong>Fungus:</strong> Apply a fungicide containing <strong>azoxystrobin</strong> (Heritage, Scott's DiseaseEx) or <strong>propiconazole</strong>. Reduce evening watering.</li>
+                        <li><strong>Fungus:</strong> Apply a fungicide containing <strong>azoxystrobin</strong> (Heritage, <a href="https://www.homedepot.com/p/Scotts-DiseaseEx-10-lbs-Treats-Up-to-5-000-sq-ft-Lawn-Fungicide-Controls-and-Prevents-Disease-Up-to-4-Weeks-37610C/302681421" target="_blank" style="color:inherit; text-decoration:underline;">Scott's DiseaseEx</a>) or <strong>propiconazole</strong>. Reduce evening watering.</li>
                         <li><strong>Dollar Spot:</strong> Increase nitrogen feeding &mdash; it often resolves on its own with proper fertilization.</li>
-                        <li><strong>Grubs:</strong> Apply <strong>GrubEx</strong> (chlorantraniliprole) preventively in June, or <strong>Dylox</strong> (trichlorfon) as a curative if grubs are already present. Pull up a section of turf &mdash; more than 5 grubs per sq ft = treatment needed.</li>
+                        <li><strong>Grubs:</strong> Apply <strong><a href="https://www.homedepot.com/p/Scotts-GrubEx1-28-7-lbs-10-000-sq-ft-Season-Long-Grub-Killer-Protects-Lawns-Up-to-4-Months-99610/202745341" target="_blank" style="color:inherit; text-decoration:underline;">GrubEx</a></strong> (chlorantraniliprole) preventively in June, or <strong><a href="https://www.domyown.com/dylox-62-granules-p-1454.html" target="_blank" style="color:inherit; text-decoration:underline;">Dylox</a></strong> (trichlorfon) as a curative if grubs are already present. Pull up a section of turf &mdash; more than 5 grubs per sq ft = treatment needed.</li>
                         <li><strong>Scalping:</strong> Level low spots with sand topdressing over time. Raise your mow height slightly.</li>
                     </ul>
                 </div>
@@ -1518,7 +1529,7 @@
                 <div>
                     <p><strong>Fixes:</strong></p>
                     <ul>
-                        <li><strong>Iron:</strong> Apply <strong>ferrous sulfate</strong> (2 oz per 1,000 sq ft in water) or <strong>Ironite</strong>. Green-up in 2&ndash;3 days.</li>
+                        <li><strong>Iron:</strong> Apply <strong><a href="https://www.amazon.com/Hi-yield-32340-Iron-Sulfate-Sq-ft/dp/B07CRNTR7G" target="_blank" style="color:inherit; text-decoration:underline;">ferrous sulfate</a></strong> (2 oz per 1,000 sq ft in water) or <strong><a href="https://www.homedepot.com/p/Ironite-15-lb-5-000-sq-ft-Dry-Lawn-and-Garden-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-1-0-0-100544883/317814846" target="_blank" style="color:inherit; text-decoration:underline;">Ironite</a></strong>. Green-up in 2&ndash;3 days.</li>
                         <li><strong>Nitrogen:</strong> Apply a balanced fertilizer per the schedule above.</li>
                         <li><strong>Overwatering:</strong> Cut back to 1&ndash;1.25" per week. Let the top inch of soil dry between waterings.</li>
                         <li><strong>Compaction:</strong> Core aerate in late spring.</li>
@@ -1580,57 +1591,57 @@
                 <tbody>
                     <tr>
                         <td>Crabgrass (prevent)</td>
-                        <td>Prodiamine 65 WDG, Scotts Halts, Dimension</td>
+                        <td><a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Prodiamine 65 WDG</a>, <a href="https://www.homedepot.com/p/Scotts-Halts-Crabgrass-and-Grassy-Weed-Preventer-10-06-lbs-5-000-sq-ft-For-Use-on-Lawns-Also-Prevents-Henbit-and-Chickweed-44990A/204867898" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Halts</a>, Dimension</td>
                         <td>Early spring, soil 55&deg;F</td>
                     </tr>
                     <tr>
                         <td>Crabgrass (kill existing)</td>
-                        <td>Quinclorac (Drive XLR8)</td>
+                        <td><a href="https://www.amazon.com/BASF-Crabgrass-Ingredient-Quinclorac-Concentrate/dp/B0058W42QS" target="_blank" style="color:inherit; text-decoration:underline;">Quinclorac</a> (<a href="https://www.amazon.com/BASF-Crabgrass-Ingredient-Quinclorac-Concentrate/dp/B0058W42QS" target="_blank" style="color:inherit; text-decoration:underline;">Drive XLR8</a>)</td>
                         <td>When crabgrass is young, actively growing</td>
                     </tr>
                     <tr>
                         <td>Clover, dandelions, broadleaf weeds</td>
-                        <td>Celsius WG, Spectracide Weed Stop, triclopyr</td>
+                        <td><a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:inherit; text-decoration:underline;">Celsius WG</a>, <a href="https://www.homedepot.com/p/Spectracide-40-oz-Weed-Stop-for-Lawns-Concentrate-Lawn-Weed-Killer-HG-96623/307431046" target="_blank" style="color:inherit; text-decoration:underline;">Spectracide Weed Stop</a>, triclopyr</td>
                         <td>Temps 60&ndash;85&deg;F, weeds actively growing</td>
                     </tr>
                     <tr>
                         <td>Poa annua (prevent)</td>
-                        <td>Prodiamine, Barricade</td>
+                        <td><a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Prodiamine</a>, <a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Barricade</a></td>
                         <td>Fall, soil temps dropping to 70&deg;F</td>
                     </tr>
                     <tr>
                         <td>Nutsedge</td>
-                        <td>SedgeHammer, Dismiss</td>
+                        <td><a href="https://www.amazon.com/Plus-Turf-Herbicide-Surfactant-Residential/dp/B0BTKTVN76" target="_blank" style="color:inherit; text-decoration:underline;">SedgeHammer</a>, <a href="https://www.amazon.com/Dismiss-Turf-Herbicide/dp/B004LN33GK" target="_blank" style="color:inherit; text-decoration:underline;">Dismiss</a></td>
                         <td>Summer, nutsedge actively growing</td>
                     </tr>
                     <tr>
                         <td>Brown Patch / Dollar Spot (fungus)</td>
-                        <td>Scott's DiseaseEx, propiconazole</td>
+                        <td><a href="https://www.homedepot.com/p/Scotts-DiseaseEx-10-lbs-Treats-Up-to-5-000-sq-ft-Lawn-Fungicide-Controls-and-Prevents-Disease-Up-to-4-Weeks-37610C/302681421" target="_blank" style="color:inherit; text-decoration:underline;">Scott's DiseaseEx</a>, propiconazole</td>
                         <td>At first sign of symptoms</td>
                     </tr>
                     <tr>
                         <td>Grubs (prevent)</td>
-                        <td>GrubEx (chlorantraniliprole)</td>
+                        <td><a href="https://www.homedepot.com/p/Scotts-GrubEx1-28-7-lbs-10-000-sq-ft-Season-Long-Grub-Killer-Protects-Lawns-Up-to-4-Months-99610/202745341" target="_blank" style="color:inherit; text-decoration:underline;">GrubEx</a> (chlorantraniliprole)</td>
                         <td>Mid-June, preventive</td>
                     </tr>
                     <tr>
                         <td>Grubs (kill active)</td>
-                        <td>Dylox (trichlorfon)</td>
+                        <td><a href="https://www.domyown.com/dylox-62-granules-p-1454.html" target="_blank" style="color:inherit; text-decoration:underline;">Dylox</a> (trichlorfon)</td>
                         <td>When grubs found (&gt;5 per sq ft)</td>
                     </tr>
                     <tr>
                         <td>Yellow lawn / iron deficiency</td>
-                        <td>Ferrous sulfate, Ironite, chelated iron</td>
+                        <td><a href="https://www.amazon.com/Hi-yield-32340-Iron-Sulfate-Sq-ft/dp/B07CRNTR7G" target="_blank" style="color:inherit; text-decoration:underline;">Ferrous sulfate</a>, <a href="https://www.homedepot.com/p/Ironite-15-lb-5-000-sq-ft-Dry-Lawn-and-Garden-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-1-0-0-100544883/317814846" target="_blank" style="color:inherit; text-decoration:underline;">Ironite</a>, chelated iron</td>
                         <td>Anytime during growing season</td>
                     </tr>
                     <tr>
                         <td>General feeding</td>
-                        <td>Milorganite, Scotts Southern, 32-0-10</td>
+                        <td><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a>, <a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Southern</a>, 32-0-10</td>
                         <td>April&ndash;August, every 4&ndash;6 weeks</td>
                     </tr>
                     <tr>
                         <td>Winter hardiness (fall)</td>
-                        <td>Muriate of potash (0-0-60)</td>
+                        <td><a href="https://www.homedepot.com/p/Sunshine-Harvest-Potash-12-lbs-Shaker-Jug-NPK-0-0-60-PO-12SJ/325909674" target="_blank" style="color:inherit; text-decoration:underline;">Muriate of potash</a> (0-0-60)</td>
                         <td>September, no nitrogen</td>
                     </tr>
                 </tbody>
@@ -1679,19 +1690,19 @@
                         <td><strong>Apr</strong></td>
                         <td>1&ndash;2" / 7&ndash;10 days</td>
                         <td>0.5&ndash;1 lb N &bull; <em>32-0-10</em></td>
-                        <td>Spot-treat broadleaf (Celsius WG)</td>
+                        <td>Spot-treat broadleaf (<a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:inherit; text-decoration:underline;">Celsius WG</a>)</td>
                     </tr>
                     <tr>
                         <td><strong>May</strong></td>
                         <td>1&ndash;2" / 5&ndash;7 days</td>
-                        <td>0.5&ndash;1 lb N &bull; <em>Milorganite or 32-0-10</em></td>
+                        <td>0.5&ndash;1 lb N &bull; <em><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> or 32-0-10</em></td>
                         <td>Dethatch &amp; aerate if needed</td>
                     </tr>
                     <tr>
                         <td><strong>Jun</strong></td>
                         <td>1&ndash;2" / 4&ndash;5 days</td>
-                        <td>0.5&ndash;1 lb N &bull; <em>Milorganite or 21-0-0</em></td>
-                        <td>GrubEx mid-month</td>
+                        <td>0.5&ndash;1 lb N &bull; <em><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> or 21-0-0</em></td>
+                        <td><a href="https://www.homedepot.com/p/Scotts-GrubEx1-28-7-lbs-10-000-sq-ft-Season-Long-Grub-Killer-Protects-Lawns-Up-to-4-Months-99610/202745341" target="_blank" style="color:inherit; text-decoration:underline;">GrubEx</a> mid-month</td>
                     </tr>
                     <tr style="background:#fff8e1;">
                         <td><strong>Jul</strong></td>
@@ -1702,7 +1713,7 @@
                     <tr>
                         <td><strong>Aug</strong></td>
                         <td>1&ndash;2" / 5&ndash;7 days</td>
-                        <td>0.5 lb N (LAST!) &bull; <em>Milorganite</em></td>
+                        <td>0.5 lb N (LAST!) &bull; <em><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a></em></td>
                         <td>Spot-treat weeds</td>
                     </tr>
                     <tr>
@@ -1737,23 +1748,23 @@
                 <div class="cs-box">
                     <h4>Fertilizer Products (NPK)</h4>
                     <ul>
-                        <li><strong>Scotts Southern</strong> &mdash; 32-0-10</li>
-                        <li><strong>Milorganite</strong> &mdash; 6-4-0 (organic)</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:inherit; text-decoration:underline;">Scotts Southern</a></strong> &mdash; 32-0-10</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a></strong> &mdash; 6-4-0 (organic)</li>
                         <li><strong>Lesco</strong> &mdash; 24-0-11</li>
-                        <li><strong>Ammonium sulfate</strong> &mdash; 21-0-0</li>
-                        <li><strong>Pennington Ultragreen</strong> &mdash; 30-0-4</li>
-                        <li><strong>Muriate of potash</strong> &mdash; 0-0-60</li>
+                        <li><strong><a href="https://www.homedepot.com/p/15-lbs-3500-sq-ft-Ammonium-Sulfate-Dry-Lawn-Fertilizer-21-0-0-904498/315672654" target="_blank" style="color:inherit; text-decoration:underline;">Ammonium sulfate</a></strong> &mdash; 21-0-0</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Pennington-Ultragreen-14-lb-5-000-sq-ft-Lawn-Fertilizer-30-0-4-with-Heat-Resistency-100536576/312265378" target="_blank" style="color:inherit; text-decoration:underline;">Pennington Ultragreen</a></strong> &mdash; 30-0-4</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Sunshine-Harvest-Potash-12-lbs-Shaker-Jug-NPK-0-0-60-PO-12SJ/325909674" target="_blank" style="color:inherit; text-decoration:underline;">Muriate of potash</a></strong> &mdash; 0-0-60</li>
                     </ul>
                 </div>
                 <div class="cs-box">
                     <h4>Weed &amp; Pest Products</h4>
                     <ul>
-                        <li><strong>Prodiamine 65 WDG</strong> &mdash; pre-emergent (spring + fall)</li>
-                        <li><strong>Celsius WG</strong> &mdash; post-emergent broadleaf (Bermuda-safe)</li>
-                        <li><strong>Quinclorac</strong> &mdash; kills crabgrass</li>
-                        <li><strong>SedgeHammer</strong> &mdash; kills nutsedge</li>
-                        <li><strong>GrubEx</strong> &mdash; grub prevention (June)</li>
-                        <li><strong>DiseaseEx</strong> &mdash; fungicide (brown patch)</li>
+                        <li><strong><a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:inherit; text-decoration:underline;">Prodiamine 65 WDG</a></strong> &mdash; pre-emergent (spring + fall)</li>
+                        <li><strong><a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:inherit; text-decoration:underline;">Celsius WG</a></strong> &mdash; post-emergent broadleaf (Bermuda-safe)</li>
+                        <li><strong><a href="https://www.amazon.com/BASF-Crabgrass-Ingredient-Quinclorac-Concentrate/dp/B0058W42QS" target="_blank" style="color:inherit; text-decoration:underline;">Quinclorac</a></strong> &mdash; kills crabgrass</li>
+                        <li><strong><a href="https://www.amazon.com/Plus-Turf-Herbicide-Surfactant-Residential/dp/B0BTKTVN76" target="_blank" style="color:inherit; text-decoration:underline;">SedgeHammer</a></strong> &mdash; kills nutsedge</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Scotts-GrubEx1-28-7-lbs-10-000-sq-ft-Season-Long-Grub-Killer-Protects-Lawns-Up-to-4-Months-99610/202745341" target="_blank" style="color:inherit; text-decoration:underline;">GrubEx</a></strong> &mdash; grub prevention (June)</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Scotts-DiseaseEx-10-lbs-Treats-Up-to-5-000-sq-ft-Lawn-Fungicide-Controls-and-Prevents-Disease-Up-to-4-Weeks-37610C/302681421" target="_blank" style="color:inherit; text-decoration:underline;">DiseaseEx</a></strong> &mdash; fungicide (brown patch)</li>
                     </ul>
                 </div>
                 <div class="cs-box">
@@ -1761,7 +1772,7 @@
                     <ul>
                         <li>Lbs of product = Desired N &divide; (N% &divide; 100)</li>
                         <li><strong>32-0-10:</strong> 3.1 lbs = 1 lb N</li>
-                        <li><strong>Milorganite:</strong> 16.7 lbs = 1 lb N</li>
+                        <li><strong><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a>:</strong> 16.7 lbs = 1 lb N</li>
                         <li><strong>21-0-0:</strong> 4.8 lbs = 1 lb N</li>
                         <li><strong>24-0-11:</strong> 4.2 lbs = 1 lb N</li>
                     </ul>
@@ -1774,7 +1785,7 @@
                         <li>Water early AM, never evening</li>
                         <li>Bermuda turns brown in winter &mdash; it's not dead</li>
                         <li>Soil test = best $15 you'll spend</li>
-                        <li>Iron (ferrous sulfate) = dark green, no extra growth</li>
+                        <li>Iron (<a href="https://www.amazon.com/Hi-yield-32340-Iron-Sulfate-Sq-ft/dp/B07CRNTR7G" target="_blank" style="color:inherit; text-decoration:underline;">ferrous sulfate</a>) = dark green, no extra growth</li>
                     </ul>
                 </div>
             </div>
