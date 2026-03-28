@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 2026 Bermuda Lawn Plan - Lot 50</title>
+    <style>
+        :root {
+            --gd: #1b5e20; --gm: #2e7d32; --gl: #4caf50; --gp: #e8f5e9;
+            --orange: #ef6c00; --blue: #1565c0; --red: #c62828; --gold: #f9a825;
+            --shadow: 0 4px 16px rgba(27,94,32,0.10);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #fafff7; color: #263238; line-height: 1.65; }
+
+        .hero { background: linear-gradient(135deg, var(--gd), var(--gm), var(--gl)); color: white; text-align: center; padding: 40px 20px 32px; }
+        .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 4px; }
+        .hero p { font-size: 1rem; opacity: 0.9; }
+        .hero .lot-info { display: inline-block; background: rgba(255,255,255,0.18); padding: 6px 20px; border-radius: 20px; font-size: 0.9rem; margin-top: 12px; font-weight: 600; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+        section { margin: 30px 0; }
+
+        h2 { font-size: 1.4rem; color: var(--gd); margin-bottom: 14px; padding-bottom: 4px; border-bottom: 3px solid var(--gp); }
+        h3 { font-size: 1.05rem; color: var(--gd); margin-bottom: 6px; }
+
+        .card { background: white; border-radius: 14px; box-shadow: var(--shadow); padding: 20px 24px; margin-bottom: 14px; border-left: 5px solid var(--gl); }
+        .card ul { padding-left: 18px; margin-top: 6px; }
+        .card li { margin-bottom: 4px; font-size: 0.93rem; color: #455a64; }
+        .card p { font-size: 0.93rem; color: #455a64; }
+
+        .highlight { background: var(--gp); border-radius: 10px; padding: 14px 20px; margin: 12px 0; border-left: 4px solid var(--gl); }
+        .highlight-warn { background: #fff3e0; border-left-color: var(--orange); }
+        .highlight-tip { background: #e3f2fd; border-left-color: var(--blue); }
+        .highlight strong { color: var(--gd); }
+        .highlight-warn strong { color: var(--orange); }
+        .highlight-tip strong { color: var(--blue); }
+
+        /* ACTION CARDS */
+        .action { background: white; border-radius: 14px; box-shadow: var(--shadow); margin-bottom: 16px; overflow: hidden; }
+        .action-header { padding: 14px 22px; display: flex; align-items: center; gap: 14px; }
+        .action-month { font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 16px; background: var(--gp); color: var(--gd); white-space: nowrap; }
+        .action-month-hl { background: #fff8e1; color: #f57f17; }
+        .action-title { font-size: 1.05rem; font-weight: 700; color: var(--gd); }
+        .action-body { padding: 0 22px 18px; }
+        .action-body table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 4px; }
+        .action-body th { background: var(--gd); color: white; padding: 7px 12px; text-align: left; font-size: 0.8rem; }
+        .action-body td { padding: 8px 12px; border-bottom: 1px solid #eee; color: #455a64; }
+        .action-body tbody tr:nth-child(even) { background: #f9f9f9; }
+        .product-name { font-weight: 700; color: var(--gd); }
+        .npk { font-weight: 700; font-size: 0.85rem; color: var(--gm); }
+        .amount { font-weight: 700; color: #263238; font-size: 0.95rem; }
+        .action-note { font-size: 0.82rem; color: #78909c; margin-top: 8px; padding: 8px 12px; background: #f5f5f5; border-radius: 8px; }
+        .zone-split { display: flex; gap: 8px; margin-top: 6px; }
+        .zone-tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 700; }
+        .zone-front { background: var(--gp); color: var(--gd); }
+        .zone-back { background: #e3f2fd; color: var(--blue); }
+
+        /* SHOPPING LIST */
+        .shop-item { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid #eee; }
+        .shop-item:last-child { border-bottom: none; }
+        .shop-check { width: 22px; height: 22px; border: 2px solid var(--gl); border-radius: 4px; flex-shrink: 0; }
+        .shop-details { flex: 1; }
+        .shop-name { font-weight: 700; color: var(--gd); font-size: 0.95rem; }
+        .shop-meta { font-size: 0.82rem; color: #78909c; }
+        .shop-qty { font-weight: 800; color: var(--gm); font-size: 1.1rem; text-align: right; min-width: 80px; }
+
+        /* GRID */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+        /* PROBLEM TABLE */
+        .prob-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+        .prob-table thead { background: var(--red); color: white; }
+        .prob-table th { padding: 8px 12px; text-align: left; font-size: 0.8rem; }
+        .prob-table td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+        .prob-table tbody tr:nth-child(even) { background: #fff5f5; }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.6rem; }
+            .card { padding: 16px 18px; }
+            .action-header { padding: 12px 16px; }
+            .action-body { padding: 0 16px 14px; }
+        }
+
+        /* PRINT */
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            body { background: white; font-size: 9.5pt; }
+            .hero { padding: 24px 16px 20px; }
+            .hero h1 { font-size: 18pt; }
+            .container { max-width: 100%; }
+            .card, .action { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; page-break-inside: avoid; }
+            .highlight { break-inside: avoid; }
+            section { margin: 16px 0; }
+            @page { margin: 0.5in 0.6in; size: letter; }
+        }
+
+        footer { text-align: center; padding: 30px 16px; color: #90a4ae; font-size: 0.8rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div style="font-size:2.2rem; margin-bottom:8px;">&#127793;</div>
+    <h1>My 2026 Bermuda Lawn Plan</h1>
+    <p>Lot 50 &bull; Personalized product schedule with exact quantities</p>
+    <div class="lot-info">~12,000 sq ft lawn &bull; Bermuda Grass &bull; Cut at 1&ndash;2"</div>
+</div>
+
+<div class="container">
+
+    <!-- ============================================ -->
+    <!-- YOUR LAWN AT A GLANCE -->
+    <!-- ============================================ -->
+    <section>
+        <h2>Your Lawn at a Glance</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Lot 50 &bull; Lantana by Tri Pointe</h3>
+                <ul>
+                    <li><strong>Location:</strong> Cypress, TX (Houston area)</li>
+                    <li><strong>House:</strong> 2,492 sq ft (5 bed / 3 bath / 2-story)</li>
+                    <li><strong>Total lot:</strong> ~14,500 sq ft</li>
+                    <li><strong>Ground footprint:</strong> ~1,850 sq ft (incl. 2-bay garage)</li>
+                    <li><strong>Driveway/walks/patio:</strong> ~650 sq ft</li>
+                    <li><strong>First frost:</strong> ~mid-December (Zone 9a)</li>
+                    <li><strong>Last frost:</strong> ~mid-February</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>The Basics</h3>
+                <ul>
+                    <li><strong>Mow at:</strong> 1&ndash;2" (rotary mower)</li>
+                    <li><strong>Mow every:</strong> 4&ndash;7 days (peak season)</li>
+                    <li><strong>Water:</strong> 1&ndash;1.25" per week</li>
+                    <li><strong>Fertilize:</strong> April through August only</li>
+                    <li><strong>Spring scalp:</strong> Late March, cut to 0.5&ndash;1", bag it</li>
+                    <li><strong>Sharpen blades:</strong> Every 3 weeks</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- YARD ZONES -->
+        <div class="card" style="margin-top: 4px; border-left-color: var(--gold);">
+            <h3>Your Yard Zones</h3>
+            <div class="grid-2" style="margin-top:8px;">
+                <div style="text-align:center; padding:14px; background:var(--gp); border-radius:10px;">
+                    <div style="font-size:2rem;">&#127968;</div>
+                    <div style="font-size:1.3rem; font-weight:800; color:var(--gd);">~3,500 sq ft</div>
+                    <div style="font-size:0.9rem; font-weight:600; color:var(--gm);">Front + Sides (30%)</div>
+                </div>
+                <div style="text-align:center; padding:14px; background:#e3f2fd; border-radius:10px;">
+                    <div style="font-size:2rem;">&#127795;</div>
+                    <div style="font-size:1.3rem; font-weight:800; color:var(--blue);">~8,500 sq ft</div>
+                    <div style="font-size:0.9rem; font-weight:600; color:var(--blue);">Back Yard (70%)</div>
+                </div>
+            </div>
+            <p style="font-size:0.82rem; color:#78909c; text-align:center; margin-top:8px;"><strong>Total lawn: ~12,000 sq ft</strong> &bull; Backs up to reserve/open space &bull; Cul-de-sac lot (wider in back)</p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SHOPPING LIST -->
+    <!-- ============================================ -->
+    <section>
+        <h2>Season Shopping List</h2>
+        <p style="color:#607d8b; margin-bottom:14px; font-size:0.9rem;">Everything you need for the full 2026 season. Buy it all now or as you go.</p>
+
+        <div class="card">
+            <h3>Fertilizers</h3>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.homedepot.com/p/Scotts-Turf-Builder-42-18-lbs-15-000-sq-ft-Southern-Dry-Lawn-Fertilizer-for-Southern-Grass-23415/100355695" target="_blank" style="color:var(--gd);">Scotts Turf Builder Southern (32-0-10) &mdash; 15K sq ft bag</a></div>
+                    <div class="shop-meta">42 lb bag covers 15,000 sq ft &bull; Use Apr, May, Jul &bull; ~$45/bag</div>
+                </div>
+                <div class="shop-qty">3 bags</div>
+            </div>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:var(--gd);">Milorganite (6-4-0) &mdash; 32 lb bag</a></div>
+                    <div class="shop-meta">32 lb bag covers 2,500 sq ft &bull; Use Jun + Aug (heat months) &bull; ~$13/bag</div>
+                </div>
+                <div class="shop-qty">7&ndash;8 bags</div>
+            </div>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.homedepot.com/p/Sunshine-Harvest-Potash-12-lbs-Shaker-Jug-NPK-0-0-60-PO-12SJ/325909674" target="_blank" style="color:var(--gd);">Muriate of Potash (0-0-60) &mdash; 12 lb jug</a></div>
+                    <div class="shop-meta">Use Sep &bull; Potassium only for winter hardiness</div>
+                </div>
+                <div class="shop-qty">2 jugs (24 lbs)</div>
+            </div>
+            <div class="highlight-tip highlight" style="font-size:0.85rem; margin-top:10px;">
+                <strong>Why the mix?</strong> Scotts Southern (32-0-10) is efficient &mdash; only 3 lbs per 1K sq ft to get 1 lb of N. Milorganite is safe in peak heat (zero burn risk) but needs ~16 lbs per 1K sq ft because it's only 6% nitrogen. Use synthetic when it's cooler (Apr, May, Jul), organic when it's hottest (Jun, Aug).
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Weed Control</h3>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.solutionsstores.com/prodiamine-65-wdg-barricade-herbicide" target="_blank" style="color:var(--gd);">Prodiamine 65 WDG (pre-emergent)</a></div>
+                    <div class="shop-meta">5 oz jar lasts 1&ndash;2 seasons for 12K sq ft &bull; Use Mar + Sep &bull; ~$20&ndash;30</div>
+                </div>
+                <div class="shop-qty">1 jar (5 oz)</div>
+            </div>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.amazon.com/Celcius-WG-Herbicide-6666194/dp/B006LC7DD8" target="_blank" style="color:var(--gd);">Celsius WG Herbicide (post-emergent, Bermuda-safe)</a></div>
+                    <div class="shop-meta">10 oz bottle lasts multiple seasons &bull; Use as needed Apr&ndash;Sep &bull; ~$50&ndash;70</div>
+                </div>
+                <div class="shop-qty">1 bottle</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Pest &amp; Disease</h3>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.homedepot.com/p/Scotts-GrubEx1-28-7-lbs-10-000-sq-ft-Season-Long-Grub-Killer-Protects-Lawns-Up-to-4-Months-99610/202745341" target="_blank" style="color:var(--gd);">Scotts GrubEx &mdash; 28.7 lb bag (10K sq ft)</a></div>
+                    <div class="shop-meta">Apply mid-June &bull; One-time seasonal application &bull; ~$45/bag</div>
+                </div>
+                <div class="shop-qty">2 bags</div>
+            </div>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.homedepot.com/p/Scotts-DiseaseEx-10-lbs-Treats-Up-to-5-000-sq-ft-Lawn-Fungicide-Controls-and-Prevents-Disease-Up-to-4-Weeks-37610C/302681421" target="_blank" style="color:var(--gd);">Scotts DiseaseEx (fungicide) &mdash; 10 lb bag</a></div>
+                    <div class="shop-meta">Only if brown patch appears &bull; ~$21/bag</div>
+                </div>
+                <div class="shop-qty">Keep 1 on hand</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Bonus / As-Needed</h3>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.homedepot.com/p/Ironite-15-lb-5-000-sq-ft-Dry-Lawn-and-Garden-Fertilizer-1-0-0-100544883/317814846" target="_blank" style="color:var(--gd);">Ironite (1-0-0) &mdash; 15 lb bag</a></div>
+                    <div class="shop-meta">Quick dark green without extra growth &bull; Anytime during growing season</div>
+                </div>
+                <div class="shop-qty">1&ndash;2 bags</div>
+            </div>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.amazon.com/Plus-Turf-Herbicide-Surfactant-Residential/dp/B0BTKTVN76" target="_blank" style="color:var(--gd);">SedgeHammer Plus (nutsedge killer)</a></div>
+                    <div class="shop-meta">Only if you see bright yellow-green triangular-stem weeds</div>
+                </div>
+                <div class="shop-qty">1 packet</div>
+            </div>
+            <div class="shop-item">
+                <div class="shop-check"></div>
+                <div class="shop-details">
+                    <div class="shop-name"><a href="https://www.amazon.com/Southern-Ag-Surfactant-Herbicides-Non-Ionic/dp/B004XDHRCE" target="_blank" style="color:var(--gd);">Southern Ag Surfactant (non-ionic)</a></div>
+                    <div class="shop-meta">Mix with spray herbicides for better leaf adhesion</div>
+                </div>
+                <div class="shop-qty">1 bottle (16 oz)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- MONTH BY MONTH ACTION PLAN -->
+    <!-- ============================================ -->
+    <section>
+        <h2>Month-by-Month Action Plan</h2>
+        <p style="color:#607d8b; margin-bottom:16px; font-size:0.9rem;">Every product, every amount, every month. All quantities calculated for your 12,000 sq ft lawn.</p>
+
+        <!-- MARCH -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month action-month-hl">MARCH &mdash; NOW</span>
+                <span class="action-title">Spring Scalp &amp; Pre-Emergent</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pre-emergent</strong><br><span style="font-size:0.8rem;color:#78909c;">When soil hits 55&deg;F (forsythia blooming)</span></td>
+                            <td><span class="product-name">Prodiamine 65 WDG</span> <span class="npk">(pre-emergent)</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~1 tsp in 1 gal</span>
+                                <span class="zone-tag zone-back">Back: ~2 tsp in 2&ndash;3 gal</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: ~3 tsp in 3&ndash;4 gal water</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spring scalp</strong></td>
+                            <td>Your mower set to lowest setting (0.5&ndash;1")</td>
+                            <td><span class="amount">Bag all clippings</span><br><span style="font-size:0.8rem;color:#78909c;">After last hard freeze, before green-up</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>Also:</strong> Sharpen mower blades &bull; Change oil &bull; Send soil test to extension office ($15&ndash;20) &bull; Do NOT fertilize yet
+                </div>
+            </div>
+        </div>
+
+        <!-- APRIL -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">APRIL</span>
+                <span class="action-title">First Feeding &amp; First Real Mow</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fertilize</strong><br><span style="font-size:0.8rem;color:#78909c;">Wait until lawn is 50%+ green</span></td>
+                            <td><span class="product-name">Scotts Turf Builder Southern</span> <span class="npk">32-0-10</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~11 lbs</span>
+                                <span class="zone-tag zone-back">Back: ~26 lbs</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: ~37 lbs (1 bag of the 42 lb size)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spot-treat weeds</strong><br><span style="font-size:0.8rem;color:#78909c;">Dandelions, clover, henbit</span></td>
+                            <td><span class="product-name">Celsius WG</span> <span class="npk">(post-emergent)</span></td>
+                            <td><span class="amount">Spot-spray only</span><br><span style="font-size:0.8rem;color:#78909c;">Mix per label + surfactant. 60&ndash;85&deg;F.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>Mowing:</strong> Start regular mowing at 1&ndash;2" every 7&ndash;10 days &bull; Mulch clippings from now on
+                </div>
+            </div>
+        </div>
+
+        <!-- MAY -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">MAY</span>
+                <span class="action-title">Memorial Day Feeding</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fertilize</strong><br><span style="font-size:0.8rem;color:#78909c;">Around Memorial Day</span></td>
+                            <td><span class="product-name">Scotts Turf Builder Southern</span> <span class="npk">32-0-10</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~11 lbs</span>
+                                <span class="zone-tag zone-back">Back: ~26 lbs</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: ~37 lbs (1 bag of the 42 lb size)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>Mowing:</strong> Every 5&ndash;7 days now &bull; <strong>Watering:</strong> Start 1&ndash;1.25"/week if rain is scarce &bull; <strong>Optional:</strong> Dethatch &amp; aerate if thatch &gt; 0.5"
+                </div>
+            </div>
+        </div>
+
+        <!-- JUNE -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">JUNE</span>
+                <span class="action-title">Peak Growth + Grub Prevention</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fertilize</strong><br><span style="font-size:0.8rem;color:#78909c;">Late June</span></td>
+                            <td><span class="product-name">Milorganite</span> <span class="npk">6-4-0</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: 1.5 bags</span>
+                                <span class="zone-tag zone-back">Back: 3.5 bags</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: 5 bags (160 lbs)</span>
+                                <br><span style="font-size:0.78rem;color:#78909c;">Peak heat &mdash; organic = zero burn risk</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Grub preventer</strong><br><span style="font-size:0.8rem;color:#78909c;">Mid-June</span></td>
+                            <td><span class="product-name">Scotts GrubEx</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~1 bag</span>
+                                <span class="zone-tag zone-back">Back: ~1.5 bags</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: 2 bags of the 28.7 lb/10K size</span>
+                                <br><span style="font-size:0.78rem;color:#78909c;">Water in after applying</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>Mowing:</strong> Every 4&ndash;5 days &mdash; Bermuda is ripping now &bull; <strong>Water:</strong> Early AM, 1&ndash;1.25"/week
+                </div>
+            </div>
+        </div>
+
+        <!-- JULY -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month action-month-hl">JULY &mdash; PRIME TIME</span>
+                <span class="action-title">Heavy Feed + Potassium Boost</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fertilize + K</strong><br><span style="font-size:0.8rem;color:#78909c;">Around July 4th</span></td>
+                            <td><span class="product-name">Scotts Turf Builder Southern</span> <span class="npk">32-0-10</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~11 lbs</span>
+                                <span class="zone-tag zone-back">Back: ~26 lbs</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: ~37 lbs (1 bag of the 42 lb size)</span>
+                                <br><span style="font-size:0.78rem;color:#78909c;">The "10" potassium builds stress tolerance</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>Mowing:</strong> Still every 4&ndash;5 days &bull; This is when Bermuda looks its absolute best &bull; Water deeply if no rain
+                </div>
+            </div>
+        </div>
+
+        <!-- AUGUST -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month action-month-hl">AUGUST &mdash; LAST NITROGEN</span>
+                <span class="action-title">Final Feeding (Go Light)</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fertilize (light)</strong><br><span style="font-size:0.8rem;color:#78909c;">Early Aug &bull; LAST nitrogen of the year</span></td>
+                            <td><span class="product-name">Milorganite</span> <span class="npk">6-4-0</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~1 bag</span>
+                                <span class="zone-tag zone-back">Back: ~1.5&ndash;2 bags</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: 2&ndash;3 bags (~80 lbs)</span>
+                                <br><span style="font-size:0.78rem;color:#78909c;">Half-rate &bull; Still hot = organic safer</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>Critical rule:</strong> This must be at least 6 weeks before your first expected frost. No more nitrogen after this!
+                </div>
+            </div>
+        </div>
+
+        <!-- SEPTEMBER -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">SEPTEMBER</span>
+                <span class="action-title">Potassium + Fall Pre-Emergent</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Product</th><th>Amount (Front / Back / Total)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Potassium (no nitrogen!)</strong><br><span style="font-size:0.8rem;color:#78909c;">Around Labor Day</span></td>
+                            <td><span class="product-name">Muriate of Potash</span> <span class="npk">0-0-60</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~6 lbs</span>
+                                <span class="zone-tag zone-back">Back: ~14 lbs</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: ~20 lbs (2 jugs of 12 lb)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fall pre-emergent</strong><br><span style="font-size:0.8rem;color:#78909c;">When soil drops to 70&deg;F</span></td>
+                            <td><span class="product-name">Prodiamine 65 WDG</span></td>
+                            <td>
+                                <span class="zone-tag zone-front">Front: ~1 tsp in 1 gal</span>
+                                <span class="zone-tag zone-back">Back: ~2 tsp in 2&ndash;3 gal</span>
+                                <br><span class="amount" style="font-size:0.85rem;">Total: ~3 tsp in 3&ndash;4 gal water</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="action-note">
+                    <strong>NO NITROGEN from here on!</strong> Potassium builds cold hardiness. Nitrogen delays dormancy and weakens Bermuda going into winter.
+                </div>
+            </div>
+        </div>
+
+        <!-- OCT-NOV -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">OCT &ndash; NOV</span>
+                <span class="action-title">Wind Down &amp; Winterize</span>
+            </div>
+            <div class="action-body">
+                <table>
+                    <thead><tr><th>Task</th><th>Details</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Mow as needed</strong></td><td>Growth slows way down. Mow every 10&ndash;14 days, then stop.</td></tr>
+                        <tr><td><strong>Mulch leaves</strong></td><td>Don't let them smother dormant Bermuda. Mulch with mower or rake.</td></tr>
+                        <tr><td><strong>Final mow</strong></td><td>November &bull; Normal height (1&ndash;2") &bull; No need to go shorter.</td></tr>
+                        <tr><td><strong>Winterize mower</strong></td><td>Fuel stabilizer, clean deck, sharpen blades for next spring.</td></tr>
+                        <tr><td><strong>Lawn goes brown</strong></td><td>This is normal! Bermuda is dormant, not dead. It comes back.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- IF YOU SEE A PROBLEM -->
+    <!-- ============================================ -->
+    <section>
+        <h2>If You See a Problem &rarr; Use This</h2>
+
+        <div class="card" style="padding: 0; overflow: hidden; border-left: 5px solid var(--red);">
+            <table class="prob-table">
+                <thead>
+                    <tr><th>What You See</th><th>What It Is</th><th>Product</th><th>Amount / 12K sq ft</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Light green spreading clumps</td>
+                        <td><strong>Crabgrass</strong></td>
+                        <td><span class="product-name">Quinclorac</span> (Drive XLR8)</td>
+                        <td>Spot-spray young plants + surfactant</td>
+                    </tr>
+                    <tr>
+                        <td>3-leaf clusters, white flowers</td>
+                        <td><strong>Clover</strong></td>
+                        <td><span class="product-name">Celsius WG</span></td>
+                        <td>Spot-spray &bull; Also: increase N feeding</td>
+                    </tr>
+                    <tr>
+                        <td>Yellow flowers, jagged leaves</td>
+                        <td><strong>Dandelions</strong></td>
+                        <td><span class="product-name">Celsius WG</span> or hand-pull</td>
+                        <td>Spot-spray at 60&ndash;85&deg;F</td>
+                    </tr>
+                    <tr>
+                        <td>Light green patches, white seed heads</td>
+                        <td><strong>Poa annua</strong></td>
+                        <td>Prevention only: <span class="product-name">Prodiamine</span> in fall</td>
+                        <td>Dies in summer heat on its own</td>
+                    </tr>
+                    <tr>
+                        <td>Bright yellow-green, triangular stem</td>
+                        <td><strong>Nutsedge</strong></td>
+                        <td><span class="product-name">SedgeHammer</span></td>
+                        <td>Spot-spray in summer &bull; May take 2&ndash;3 yrs</td>
+                    </tr>
+                    <tr>
+                        <td>Circular brown/dead patches</td>
+                        <td><strong>Brown patch</strong> (fungus)</td>
+                        <td><span class="product-name">Scotts DiseaseEx</span></td>
+                        <td>~24 lbs (2 bags of 10 lb + partial)</td>
+                    </tr>
+                    <tr>
+                        <td>Small tan spots (silver-dollar size)</td>
+                        <td><strong>Dollar spot</strong></td>
+                        <td>More nitrogen! (not fungicide)</td>
+                        <td>Increase feeding per schedule</td>
+                    </tr>
+                    <tr>
+                        <td>Turf pulls up like carpet</td>
+                        <td><strong>Grubs</strong></td>
+                        <td><span class="product-name">Dylox</span> (curative)</td>
+                        <td>Per label &bull; Treat if &gt;5 grubs/sq ft</td>
+                    </tr>
+                    <tr>
+                        <td>Whole lawn turning yellow</td>
+                        <td><strong>Iron deficiency</strong></td>
+                        <td><span class="product-name">Ferrous sulfate</span> or Ironite</td>
+                        <td>~24 oz ferrous sulfate in water &bull; Green in 2&ndash;3 days</td>
+                    </tr>
+                    <tr>
+                        <td>Ragged white/brown blade tips</td>
+                        <td><strong>Dull mower blades</strong></td>
+                        <td>Sharpen your blades!</td>
+                        <td>Every 20&ndash;25 hrs of mowing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- QUICK RULES -->
+    <!-- ============================================ -->
+    <section>
+        <h2>Golden Rules</h2>
+        <div class="grid-2">
+            <div class="highlight">
+                <strong>Mowing</strong>
+                <ul style="padding-left:16px; margin-top:6px; font-size:0.9rem;">
+                    <li>Cut at 1&ndash;2" always</li>
+                    <li>Never remove more than 1/3 of the blade</li>
+                    <li>Mulch clippings (except spring scalp)</li>
+                    <li>Alternate direction every mow</li>
+                    <li>Mow mid-morning when dry</li>
+                </ul>
+            </div>
+            <div class="highlight">
+                <strong>Watering</strong>
+                <ul style="padding-left:16px; margin-top:6px; font-size:0.9rem;">
+                    <li>1&ndash;1.25" per week total</li>
+                    <li>2&ndash;3 deep sessions, not daily</li>
+                    <li>Early morning only (5&ndash;10 AM)</li>
+                    <li>Never water in the evening (fungus)</li>
+                    <li>Signs of thirst: blue-gray color, blades folding</li>
+                </ul>
+            </div>
+            <div class="highlight highlight-warn">
+                <strong>Never Do This</strong>
+                <ul style="padding-left:16px; margin-top:6px; font-size:0.9rem;">
+                    <li>Fertilize brown/dormant Bermuda</li>
+                    <li>Apply nitrogen after August</li>
+                    <li>Dethatch or aerate dormant grass</li>
+                    <li>Mow wet or frozen grass</li>
+                    <li>Skip pre-emergent (crabgrass will win)</li>
+                </ul>
+            </div>
+            <div class="highlight highlight-tip">
+                <strong>Spreader Application Tips</strong>
+                <ul style="padding-left:16px; margin-top:6px; font-size:0.9rem;">
+                    <li>Use broadcast (rotary) spreader</li>
+                    <li>Two passes at half rate: N-S then E-W</li>
+                    <li>Apply on dry grass, water in within 24 hrs</li>
+                    <li>Sweep spills off sidewalk/driveway</li>
+                    <li>Don't apply before heavy rain</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Personalized for Lot 50 &bull; ~12,000 sq ft Bermuda lawn &bull; Generated March 2026</p>
+        <p style="margin-top:4px;">Based on research from Clemson, NC State, Texas A&amp;M, UGA, and Oklahoma State Extension programs</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

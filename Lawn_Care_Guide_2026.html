@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Bermuda Grass Lawn Care Guide</title>
+    <style>
+        :root {
+            --green-dark: #1b5e20;
+            --green-mid: #2e7d32;
+            --green-light: #4caf50;
+            --green-pale: #e8f5e9;
+            --green-accent: #66bb6a;
+            --brown: #5d4037;
+            --gold: #f9a825;
+            --orange: #ef6c00;
+            --blue: #1565c0;
+            --blue-light: #e3f2fd;
+            --red: #c62828;
+            --bg: #fafff7;
+            --text: #263238;
+            --card-shadow: 0 4px 16px rgba(27,94,32,0.10);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        [id] { scroll-margin-top: 60px; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 50%, var(--green-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 24px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60%; left: -20%;
+            width: 140%; height: 200%;
+            background: radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            font-weight: 400;
+            position: relative;
+        }
+        .hero .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 14px;
+            font-weight: 600;
+            position: relative;
+        }
+        .hero .grass-icon { font-size: 3rem; margin-bottom: 12px; display: block; }
+
+        /* LAYOUT */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* SECTION */
+        section { margin: 40px 0; }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+        .section-header .icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .section-header h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--green-dark);
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 28px 32px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--green-light);
+        }
+        .card h3 {
+            font-size: 1.15rem;
+            color: var(--green-dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .card p, .card li {
+            font-size: 0.97rem;
+            color: #455a64;
+        }
+        .card ul { padding-left: 20px; margin-top: 6px; }
+        .card li { margin-bottom: 5px; }
+
+        /* HIGHLIGHT BOX */
+        .highlight {
+            background: linear-gradient(135deg, var(--green-pale), #c8e6c9);
+            border-radius: 12px;
+            padding: 20px 26px;
+            margin: 16px 0;
+            border-left: 4px solid var(--green-light);
+        }
+        .highlight strong { color: var(--green-dark); }
+
+        .warning {
+            background: #fff3e0;
+            border-left-color: var(--orange);
+        }
+        .warning strong { color: var(--orange); }
+
+        .tip {
+            background: var(--blue-light);
+            border-left-color: var(--blue);
+        }
+        .tip strong { color: var(--blue); }
+
+        /* TABLE */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            font-size: 0.93rem;
+        }
+        thead {
+            background: var(--green-dark);
+            color: white;
+        }
+        th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #e8e8e8;
+            color: #455a64;
+        }
+        tbody tr:nth-child(even) { background: #f6faf6; }
+        tbody tr:hover { background: #e8f5e9; }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding-left: 36px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--green-light), var(--green-dark));
+            border-radius: 3px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 28px;
+            background: white;
+            border-radius: 14px;
+            padding: 22px 26px;
+            box-shadow: var(--card-shadow);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 26px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--green-light);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--green-light);
+        }
+        .timeline-item h3 {
+            font-size: 1.15rem;
+            color: var(--green-dark);
+            margin-bottom: 4px;
+        }
+        .timeline-item .month-tag {
+            display: inline-block;
+            background: var(--green-pale);
+            color: var(--green-dark);
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 2px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .timeline-item p, .timeline-item li {
+            font-size: 0.95rem;
+            color: #455a64;
+        }
+        .timeline-item ul { padding-left: 18px; margin-top: 8px; }
+        .timeline-item li { margin-bottom: 4px; }
+
+        /* CHECKLIST */
+        .checklist li {
+            list-style: none;
+            padding: 6px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+        .checklist li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--green-light);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        /* GRID */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 700px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero { padding: 40px 16px 35px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero .subtitle { font-size: 1rem; }
+            .container { padding: 0 12px; }
+            .card { padding: 20px 18px; }
+            .highlight { padding: 16px 18px; }
+            .timeline { padding-left: 28px; }
+            .timeline-item { padding: 18px 16px; }
+            .timeline-item::before { left: -21px; width: 10px; height: 10px; }
+            .timeline::before { left: 10px; }
+            th { padding: 10px 10px; font-size: 0.8rem; }
+            td { padding: 10px 10px; font-size: 0.82rem; }
+
+            /* Height visual: switch to horizontal bars on mobile */
+            .height-visual {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+                padding: 20px 16px;
+            }
+            .height-bar {
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+            }
+            .height-bar .bar {
+                height: 36px !important;
+                border-radius: 6px;
+                min-width: 40px;
+            }
+            .height-bar:nth-child(1) .bar { width: 20% !important; }
+            .height-bar:nth-child(2) .bar { width: 35% !important; }
+            .height-bar:nth-child(3) .bar { width: 55% !important; }
+            .height-bar:nth-child(4) .bar { width: 70% !important; }
+            .height-bar:nth-child(5) .bar { width: 90% !important; }
+            .height-bar .inches {
+                position: static;
+                color: white;
+                line-height: 36px;
+                padding: 0 10px;
+            }
+            .height-bar .label {
+                text-align: left;
+                font-size: 0.75rem;
+                white-space: nowrap;
+            }
+            .height-bar .label br { display: none; }
+            .cs-grid { grid-template-columns: 1fr; }
+            .cs-rules { gap: 8px; }
+            .cs-rule { min-width: 100px; font-size: 0.75rem; padding: 6px 10px; }
+            .cheat-sheet { padding: 20px 16px; }
+        }
+
+        /* PRODUCT CARDS */
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--green-light);
+        }
+        .product-card h4 {
+            color: var(--green-dark);
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+        .product-card .type-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .tag-organic { background: #c8e6c9; color: #1b5e20; }
+        .tag-synthetic { background: #bbdefb; color: #0d47a1; }
+
+        /* MOWING VISUAL */
+        .height-visual {
+            display: flex;
+            align-items: flex-end;
+            gap: 24px;
+            justify-content: center;
+            padding: 30px 20px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            margin: 20px 0;
+        }
+        .height-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .height-bar .bar {
+            width: 60px;
+            background: linear-gradient(to top, #2e7d32, #66bb6a);
+            border-radius: 6px 6px 0 0;
+            position: relative;
+        }
+        .height-bar .label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            text-align: center;
+        }
+        .height-bar .inches {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+            position: absolute;
+            bottom: 6px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #90a4ae;
+            font-size: 0.85rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 50px;
+        }
+        footer a { color: #78909c; }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--green-light), transparent);
+            margin: 40px 0;
+            border: none;
+        }
+
+        /* IMAGES */
+        .problem-img {
+            width: 100%;
+            max-width: 280px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            display: block;
+        }
+        .img-row {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        .img-row .img-side {
+            flex-shrink: 0;
+        }
+        .img-row .text-side {
+            flex: 1;
+            min-width: 0;
+        }
+        .img-caption {
+            font-size: 0.72rem;
+            color: #90a4ae;
+            text-align: center;
+            margin-top: 4px;
+            max-width: 280px;
+        }
+        @media (max-width: 700px) {
+            .img-row {
+                flex-direction: column;
+            }
+            .problem-img {
+                max-width: 100%;
+                height: 160px;
+            }
+            .img-caption { max-width: 100%; }
+        }
+
+        /* TABLE OF CONTENTS */
+        .toc-bar {
+            background: white;
+            border-bottom: 2px solid var(--green-pale);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .toc-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 4px;
+            padding: 10px 16px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+        .toc-inner::-webkit-scrollbar { height: 3px; }
+        .toc-inner::-webkit-scrollbar-thumb { background: var(--green-light); border-radius: 3px; }
+        .toc-inner a {
+            display: inline-block;
+            white-space: nowrap;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            text-decoration: none;
+            background: var(--green-pale);
+            transition: background 0.2s, color 0.2s;
+            flex-shrink: 0;
+        }
+        .toc-inner a:hover {
+            background: var(--green-light);
+            color: white;
+        }
+        /* CHEAT SHEET */
+        .cheat-sheet {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 20px;
+        }
+        .cheat-sheet h2 {
+            text-align: center;
+            color: var(--green-dark);
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+        .cheat-sheet .cs-subtitle {
+            text-align: center;
+            color: #78909c;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        .cheat-sheet table {
+            font-size: 0.82rem;
+        }
+        .cheat-sheet th {
+            padding: 8px 10px;
+            font-size: 0.78rem;
+        }
+        .cheat-sheet td {
+            padding: 7px 10px;
+            font-size: 0.82rem;
+        }
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 16px;
+        }
+        .cs-box {
+            border: 2px solid var(--green-pale);
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+        .cs-box h4 {
+            font-size: 0.85rem;
+            color: var(--green-dark);
+            margin-bottom: 6px;
+        }
+        .cs-box ul {
+            padding-left: 16px;
+            margin: 0;
+        }
+        .cs-box li {
+            font-size: 0.8rem;
+            color: #455a64;
+            margin-bottom: 2px;
+        }
+        .cs-rules {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+            justify-content: center;
+        }
+        .cs-rule {
+            background: var(--green-pale);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            text-align: center;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        /* PRINT / PDF STYLES */
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+            body { background: white; font-size: 10pt; line-height: 1.5; }
+            .hero {
+                background: var(--green-dark) !important;
+                padding: 30px 20px 25px;
+                -webkit-print-color-adjust: exact;
+            }
+            .hero h1 { font-size: 1.8rem; }
+            .toc-bar { display: none; }
+            .container { max-width: 100%; padding: 0 15px; }
+            section { margin: 20px 0; }
+            .card, .timeline-item, .product-card, .cheat-sheet {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .highlight, .warning, .tip {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .table-wrap {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                overflow: visible;
+            }
+            table { font-size: 9pt; }
+            th { padding: 6px 8px; }
+            td { padding: 5px 8px; }
+            .divider { margin: 20px 0; }
+            .section-header { margin-bottom: 14px; }
+            .section-header .icon { display: none; }
+            .height-visual { box-shadow: none; border: 1px solid #ddd; }
+            .problem-img { max-width: 200px; height: 130px; }
+            img { max-width: 100%; }
+            a { color: inherit; text-decoration: none; }
+            footer a { text-decoration: underline; }
+
+            /* Cheat sheet: always start on new page */
+            .cheat-sheet-page {
+                page-break-before: always;
+            }
+            .cheat-sheet {
+                border: 2px solid var(--green-dark);
+                box-shadow: none;
+            }
+
+            /* Page margins */
+            @page {
+                margin: 0.6in;
+                size: letter;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <span class="grass-icon">&#127793;</span>
+    <h1>Bermuda Grass Lawn Care Guide</h1>
+    <p class="subtitle">Your month-by-month playbook for a thick, dark green Bermuda lawn in 2026</p>
+    <span class="tag">Warm-Season Grass &bull; Cut Low &bull; Feed in Summer</span>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<nav class="toc-bar" id="toc">
+    <div class="toc-inner">
+        <a href="#basics">At a Glance</a>
+        <a href="#mowing-height">Mowing Height</a>
+        <a href="#mowing-tips">Mowing Tips</a>
+        <a href="#calendar">Monthly Calendar</a>
+        <a href="#fertilizer">Fertilizing</a>
+        <a href="#products">Products</a>
+        <a href="#watering">Watering</a>
+        <a href="#aeration">Aeration &amp; Thatch</a>
+        <a href="#summary">Quick Ref</a>
+        <a href="#problems">Problem Fixes</a>
+        <a href="#cheatsheet" style="background:#fff8e1;color:#f57f17;">Cheat Sheet</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- ============================================ -->
+    <!-- BERMUDA BASICS -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e8f5e9;">&#127808;</div>
+            <h2 id="basics">Bermuda Grass at a Glance</h2>
+        </div>
+
+        <div style="text-align:center; margin-bottom: 20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Bermuda_grass_%28Cynodon_dactylon%29.jpg" alt="Healthy bermuda grass lawn" style="width:100%; max-width:700px; height:260px; object-fit:cover; border-radius:14px; box-shadow: var(--card-shadow);">
+            <p style="font-size:0.78rem; color:#90a4ae; margin-top:6px;">Healthy Bermuda grass (Cynodon dactylon) &mdash; dense, low-growing, and thrives in full sun</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Why Bermuda Is Different</h3>
+                <p>Bermuda is a <strong>warm-season grass</strong> that thrives in heat and goes dormant (turns brown) in winter. Unlike cool-season grasses that peak in spring/fall, Bermuda's prime growing season is <strong>late spring through summer</strong> (May&ndash;September). This means:</p>
+                <ul>
+                    <li>You fertilize <strong>during summer</strong>, not fall</li>
+                    <li>You mow it <strong>much shorter</strong> &mdash; 1 to 2 inches</li>
+                    <li>You do a <strong>spring scalp</strong> to kickstart green-up</li>
+                    <li>You <strong>stop fertilizing</strong> 6 weeks before first frost</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Bermuda Quick Stats</h3>
+                <ul>
+                    <li><strong>Mowing height:</strong> 1&ndash;2" (rotary mower) or 0.5&ndash;1" (reel mower)</li>
+                    <li><strong>Mowing frequency:</strong> Every 5&ndash;7 days during peak growth</li>
+                    <li><strong>Fertilizer needs:</strong> 2&ndash;4 lbs N per 1,000 sq ft per year</li>
+                    <li><strong>Water needs:</strong> 1&ndash;1.25" per week</li>
+                    <li><strong>Sun requirements:</strong> Full sun (6&ndash;8+ hours daily)</li>
+                    <li><strong>Active growth:</strong> When soil temps are above 65&deg;F</li>
+                    <li><strong>Goes dormant:</strong> Below 55&deg;F soil temp (turns brown &mdash; this is normal)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- MOWING HEIGHT -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e8f5e9;">&#9986;</div>
+            <h2 id="mowing-height">Mowing Height &amp; the Spring Scalp</h2>
+        </div>
+
+        <div class="highlight">
+            <strong>Yes, Cut It Short!</strong> Bermuda grass <em>wants</em> to be mowed low. Unlike fescue or bluegrass (which prefer 3&ndash;4"), Bermuda performs best at <strong>1&ndash;2 inches</strong> with a rotary mower. If you have a reel mower, you can maintain it as low as 0.5&ndash;1". Lower heights produce a denser, more carpet-like lawn.
+        </div>
+
+        <!-- Height visual -->
+        <div class="height-visual">
+            <div class="height-bar">
+                <div class="bar" style="height: 40px;"><span class="inches">0.5"</span></div>
+                <span class="label">Reel Mower<br>(Golf-course look)</span>
+            </div>
+            <div class="height-bar">
+                <div class="bar" style="height: 65px;"><span class="inches">1"</span></div>
+                <span class="label">Reel Mower<br>(Ideal)</span>
+            </div>
+            <div class="height-bar">
+                <div class="bar" style="height: 100px;"><span class="inches">1.5"</span></div>
+                <span class="label">Rotary Mower<br>(Recommended)</span>
+            </div>
+            <div class="height-bar">
+                <div class="bar" style="height: 130px;"><span class="inches">2"</span></div>
+                <span class="label">Rotary Mower<br>(Shade / Less Mowing)</span>
+            </div>
+            <div class="height-bar">
+                <div class="bar" style="height: 180px; opacity: 0.4;"><span class="inches">3"+</span></div>
+                <span class="label" style="color:#c62828;">Too Tall<br>(Gets leggy &amp; thatchy)</span>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card" style="border-left-color: var(--gold);">
+                <h3>The Spring Scalp (Critical!)</h3>
+                <p>The spring scalp is one of the most important things you can do for Bermuda grass. It removes dead, brown dormant growth and lets sunlight reach the soil to warm it up faster.</p>
+                <ul>
+                    <li><strong>When:</strong> After the last hard freeze but <em>before</em> new green blades emerge (typically late March to mid-April)</li>
+                    <li><strong>How low:</strong> Scalp to roughly <strong>50% of your target height</strong>. If you normally mow at 1.5", scalp down to 0.75". If you normally mow at 2", scalp to 1".</li>
+                    <li><strong>Bag the clippings</strong> during the scalp &mdash; remove all the dead material</li>
+                    <li>Your lawn will look rough for 2&ndash;3 weeks, then the green will explode</li>
+                    <li>This is the ONE time you intentionally break the 1/3 rule</li>
+                </ul>
+            </div>
+            <div class="card" style="border-left-color: var(--blue);">
+                <h3>The One-Third Rule (Rest of Year)</h3>
+                <p>Outside of the spring scalp, <strong>never remove more than 1/3 of the grass blade</strong> in a single mowing. Because Bermuda is kept low, this means:</p>
+                <ul>
+                    <li>At 1.5" height: mow when it reaches ~2.25"</li>
+                    <li>At 1" height: mow when it reaches ~1.5"</li>
+                    <li>In peak summer, this means mowing <strong>every 4&ndash;5 days</strong></li>
+                    <li>Bermuda grows aggressively &mdash; if you skip mowing, you'll have to gradually lower the height over multiple sessions to avoid scalping</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight warning">
+            <strong>Rotary vs. Reel Mower:</strong> A rotary mower (standard push/riding mower) works fine for Bermuda at 1.5&ndash;2". But if you want that ultra-low, golf-course look below 1", you'll need a <strong>reel mower</strong>. Rotary mowers can't cut cleanly that low and will scalp unevenly.
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- MOWING BEST PRACTICES -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e8f5e9;">&#9881;</div>
+            <h2 id="mowing-tips">Mowing Best Practices</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Mowing Frequency</h3>
+                <ul>
+                    <li><strong>Spring green-up (April):</strong> Every 7&ndash;10 days as growth starts</li>
+                    <li><strong>Peak growth (May&ndash;Aug):</strong> Every 4&ndash;7 days</li>
+                    <li><strong>Slowing down (Sep&ndash;Oct):</strong> Every 7&ndash;10 days</li>
+                    <li><strong>Dormancy (Nov&ndash;Mar):</strong> No mowing needed</li>
+                </ul>
+                <p style="margin-top:10px;">Bermuda grows <strong>fast and lateral</strong>. Frequent mowing encourages it to spread via stolons and rhizomes, filling in bare spots and creating a denser lawn.</p>
+            </div>
+            <div class="card">
+                <h3>Best Time of Day to Mow</h3>
+                <ul>
+                    <li><strong>Ideal:</strong> Mid-morning (8&ndash;10 AM) after dew dries</li>
+                    <li><strong>Good:</strong> Late afternoon (4&ndash;6 PM) as heat fades</li>
+                    <li><strong>Avoid:</strong> Midday heat &mdash; stresses freshly cut grass</li>
+                    <li><strong>Never:</strong> When grass is wet from rain or dew</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Alternate Your Pattern</h3>
+                <p>Switch mowing direction every time &mdash; horizontal, vertical, diagonal. This prevents ruts, soil compaction, and grass grain (leaning one direction). It also gives a cleaner, more professional look.</p>
+            </div>
+            <div class="card">
+                <h3>Mulch the Clippings</h3>
+                <p><strong>Leave clippings on the lawn.</strong> They return nitrogen to the soil and can supply up to 25% of your fertilizer needs. Only bag clippings during the spring scalp or if they're clumping heavily.</p>
+            </div>
+        </div>
+
+        <div class="highlight tip">
+            <strong>Blade Sharpness:</strong> Sharpen mower blades <strong>every 20&ndash;25 hours of use</strong> (roughly every 2&ndash;3 weeks during peak mowing). Dull blades shred Bermuda instead of cutting it, leaving white/brown tips and inviting disease.
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- MONTH-BY-MONTH CALENDAR -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e8f5e9;">&#128197;</div>
+            <h2 id="calendar">2026 Month-by-Month Bermuda Calendar</h2>
+        </div>
+        <p style="color:#607d8b; margin-bottom: 24px;">Tailored for Bermuda grass in the Southern / transition zone US. Adjust timing 2&ndash;4 weeks based on your local climate.</p>
+
+        <div class="timeline">
+
+            <!-- MARCH -->
+            <div class="timeline-item" style="border-left: 3px solid var(--gold);">
+                <span class="month-tag" style="background:#fff8e1; color:#f57f17;">MARCH &mdash; YOU ARE HERE</span>
+                <h3>Wake-Up &amp; Spring Scalp</h3>
+                <ul>
+                    <li><strong>Pre-emergent herbicide:</strong> Apply NOW when soil temps reach 55&deg;F at 2" depth. Natural cue: forsythia blooming. This prevents crabgrass and goosegrass. Try to apply before a rain.</li>
+                    <li><strong>Spring scalp:</strong> Once the last hard freeze has passed, scalp the lawn down to 0.5&ndash;1" (50% of your target height). <strong>Bag all clippings.</strong> This removes dead thatch and lets sun warm the soil for faster green-up.</li>
+                    <li><strong>Mower prep:</strong> Sharpen blades, change oil, check spark plug and air filter.</li>
+                    <li><strong>Soil test:</strong> Send a sample to your local extension office. Results guide fertilizer and lime decisions for the year.</li>
+                    <li><strong>Do NOT fertilize yet</strong> &mdash; Bermuda is still waking up. Feeding now wastes product and can feed weeds instead.</li>
+                </ul>
+            </div>
+
+            <!-- APRIL -->
+            <div class="timeline-item">
+                <span class="month-tag">APRIL</span>
+                <h3>Green-Up Begins</h3>
+                <ul>
+                    <li><strong>Watch for green-up:</strong> As soil temps climb above 65&deg;F, Bermuda starts pushing new green growth.</li>
+                    <li><strong>First real mow:</strong> Once greening is well underway, begin regular mowing at your target height (1&ndash;2"). Mow every 7&ndash;10 days.</li>
+                    <li><strong>First fertilizer (late April):</strong> Once the lawn is <strong>fully green</strong> (at least 50%+ green), apply <strong>0.5&ndash;1 lb nitrogen per 1,000 sq ft</strong> of slow-release fertilizer. Do NOT fertilize while the lawn is still mostly brown.</li>
+                    <li><strong>Spot-treat weeds:</strong> Post-emergent herbicide for any broadleaf weeds (dandelions, clover, henbit). Apply when temps are 60&ndash;85&deg;F. Use products labeled safe for Bermuda.</li>
+                </ul>
+            </div>
+
+            <!-- MAY -->
+            <div class="timeline-item">
+                <span class="month-tag">MAY</span>
+                <h3>Growth Accelerates</h3>
+                <ul>
+                    <li><strong>Mowing:</strong> Increase to <strong>every 5&ndash;7 days</strong>. Maintain 1&ndash;2" height. Bermuda is growing fast now.</li>
+                    <li><strong>Fertilize (Memorial Day):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. This is your main spring feeding. Use a slow-release or blended fertilizer.</li>
+                    <li><strong>Weed control:</strong> Spot-treat any remaining broadleaf weeds. The thickening Bermuda will start crowding weeds out on its own.</li>
+                    <li><strong>Begin watering routine:</strong> If rain is scarce, provide <strong>1&ndash;1.25" per week</strong> in 2&ndash;3 deep sessions.</li>
+                </ul>
+            </div>
+
+            <!-- JUNE -->
+            <div class="timeline-item">
+                <span class="month-tag">JUNE</span>
+                <h3>Full Throttle Growth</h3>
+                <ul>
+                    <li><strong>Mowing:</strong> This is peak growth. You may need to mow <strong>every 4&ndash;5 days</strong> to keep up. Do not skip mows &mdash; Bermuda gets thatchy fast.</li>
+                    <li><strong>Fertilize:</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. Bermuda is a heavy feeder and loves summer nitrogen.</li>
+                    <li><strong>Grub prevention:</strong> Apply preventive grub control (chlorantraniliprole-based products) mid-June.</li>
+                    <li><strong>Water:</strong> 1&ndash;1.25" per week. Water early morning (before 10 AM).</li>
+                </ul>
+            </div>
+
+            <!-- JULY -->
+            <div class="timeline-item" style="border-left: 3px solid var(--gold);">
+                <span class="month-tag" style="background:#fff8e1; color:#f57f17;">JULY &mdash; BERMUDA'S PRIME TIME</span>
+                <h3>Peak Performance</h3>
+                <ul>
+                    <li><strong>Mowing:</strong> Continue every 4&ndash;5 days at 1&ndash;2". Bermuda <em>thrives</em> in summer heat &mdash; this is when it looks its best.</li>
+                    <li><strong>Fertilize (July 4th):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. Milorganite is a great organic option &mdash; it won't burn in the heat.</li>
+                    <li><strong>Potassium boost:</strong> If your soil test showed low K, apply <strong>0.5 lb potash (K2O) per 1,000 sq ft</strong> to build heat and drought tolerance.</li>
+                    <li><strong>Water deeply</strong> if rainfall is insufficient. Bermuda is drought-tolerant but performs best with consistent moisture.</li>
+                </ul>
+            </div>
+
+            <!-- AUGUST -->
+            <div class="timeline-item">
+                <span class="month-tag">AUGUST</span>
+                <h3>Last Heavy Feeding</h3>
+                <ul>
+                    <li><strong>Mowing:</strong> Still every 5&ndash;7 days at 1&ndash;2".</li>
+                    <li><strong>Fertilize (last application):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. This is your <strong>final nitrogen application</strong> of the year. Feeding later delays dormancy and reduces cold hardiness.</li>
+                    <li><strong>Count backward:</strong> Your last N application should be <strong>at least 6 weeks before the first expected frost</strong> in your area.</li>
+                    <li><strong>Spot-treat weeds</strong> as needed.</li>
+                </ul>
+            </div>
+
+            <!-- SEPTEMBER -->
+            <div class="timeline-item">
+                <span class="month-tag">SEPTEMBER</span>
+                <h3>Transition &amp; Preparation</h3>
+                <ul>
+                    <li><strong>Mowing:</strong> Growth slows. Drop to every 7&ndash;10 days.</li>
+                    <li><strong>NO more nitrogen!</strong> Bermuda needs to start hardening off for winter.</li>
+                    <li><strong>Potassium application (optional):</strong> Apply <strong>1 lb potash (K2O) per 1,000 sq ft</strong> to boost winter hardiness. Potassium (NOT nitrogen) helps Bermuda survive cold.</li>
+                    <li><strong>Fall pre-emergent:</strong> Apply to prevent winter annual weeds (Poa annua / annual bluegrass). This is especially important &mdash; Poa annua is Bermuda's nemesis.</li>
+                    <li><strong>Core aeration (if needed):</strong> Late spring/early summer is ideal for Bermuda, but early September still works while the grass is actively growing and can recover.</li>
+                </ul>
+            </div>
+
+            <!-- OCTOBER -->
+            <div class="timeline-item">
+                <span class="month-tag">OCTOBER</span>
+                <h3>Growth Slows, Dormancy Approaches</h3>
+                <ul>
+                    <li><strong>Mowing:</strong> Continue as needed, but frequency drops. Growth is slowing significantly.</li>
+                    <li><strong>No fertilizer.</strong></li>
+                    <li><strong>Leaf management:</strong> Mulch or remove fallen leaves. A thick leaf layer smothers Bermuda and traps moisture, encouraging disease.</li>
+                    <li><strong>Bermuda will begin turning brown</strong> &mdash; this is completely normal as soil temps drop below 55&deg;F.</li>
+                </ul>
+            </div>
+
+            <!-- NOVEMBER -->
+            <div class="timeline-item">
+                <span class="month-tag">NOVEMBER</span>
+                <h3>Final Mow &amp; Shutdown</h3>
+                <ul>
+                    <li><strong>Last mow:</strong> Give the lawn a final cut at your normal height (1&ndash;2") before it goes fully dormant. No need to cut shorter.</li>
+                    <li><strong>Clean up leaves:</strong> Don't let leaves sit on dormant Bermuda all winter.</li>
+                    <li><strong>Winterize your mower:</strong> Run fuel stabilizer, clean the deck, sharpen blades for next spring.</li>
+                    <li>The lawn will be brown. <strong>This is normal.</strong> Bermuda is dormant, not dead.</li>
+                </ul>
+            </div>
+
+            <!-- DECEMBER - FEBRUARY -->
+            <div class="timeline-item">
+                <span class="month-tag">DECEMBER &ndash; FEBRUARY</span>
+                <h3>Winter Dormancy</h3>
+                <ul>
+                    <li><strong>Stay off frozen grass</strong> &mdash; foot traffic on frozen dormant Bermuda can damage crowns.</li>
+                    <li><strong>Limit salt:</strong> Avoid road salt or ice melt near the lawn edge.</li>
+                    <li><strong>Plan ahead:</strong> Review soil test results, order pre-emergent and fertilizer for spring.</li>
+                    <li><strong>Optional:</strong> Some homeowners overseed dormant Bermuda with perennial ryegrass for winter green color. This is purely cosmetic and can slightly delay Bermuda's spring green-up.</li>
+                </ul>
+            </div>
+
+        </div><!-- end timeline -->
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- FERTILIZER DEEP DIVE -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e8f5e9;">&#127807;</div>
+            <h2 id="fertilizer">Fertilizing Your Bermuda Lawn</h2>
+        </div>
+
+        <div class="highlight">
+            <strong>Bermuda is a hungry grass.</strong> It needs <strong>2&ndash;4 lbs of actual nitrogen per 1,000 sq ft per year</strong>, split across 4&ndash;5 applications during the growing season (April&ndash;August). Feed it right and it'll reward you with a thick, dark green carpet.
+        </div>
+
+        <div class="card">
+            <h3>Understanding NPK Numbers</h3>
+            <p>Every fertilizer bag shows three numbers (e.g., <strong>32-0-10</strong>). These tell you the percentage by weight:</p>
+            <ul>
+                <li><strong>N (Nitrogen) &mdash; 1st number:</strong> Drives green color and blade growth. Bermuda's #1 nutrient.</li>
+                <li><strong>P (Phosphorus) &mdash; 2nd number:</strong> Root and seedling development. Usually not needed unless a soil test says otherwise &mdash; many soils already have plenty.</li>
+                <li><strong>K (Potassium) &mdash; 3rd number:</strong> Stress tolerance, disease resistance, and cold hardiness. Critical for Bermuda going into winter.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>How to Calculate "Actual Nitrogen"</h3>
+            <p>When we say "apply 1 lb of nitrogen per 1,000 sq ft," we mean <em>actual</em> N, not 1 lb of product. Here's the math:</p>
+            <div class="highlight" style="margin: 12px 0;">
+                <strong>Formula:</strong> Pounds of product = Desired N &divide; (N% on bag &divide; 100)<br><br>
+                <strong>Example with a 32-0-10 fertilizer:</strong><br>
+                To apply 1 lb of actual N: &nbsp; 1 &divide; 0.32 = <strong>3.125 lbs of product per 1,000 sq ft</strong><br><br>
+                <strong>Example with Milorganite 6-4-0:</strong><br>
+                To apply 1 lb of actual N: &nbsp; 1 &divide; 0.06 = <strong>16.7 lbs of product per 1,000 sq ft</strong> (about 1/3 of a standard 32 lb bag)
+            </div>
+            <p>Always check the bag label &mdash; many products list the spreader setting and coverage area for you.</p>
+        </div>
+
+        <div class="card">
+            <h3>Slow-Release vs. Quick-Release Nitrogen</h3>
+            <div class="grid-2" style="margin-top: 10px;">
+                <div>
+                    <p><strong>Slow-Release (Recommended)</strong></p>
+                    <ul>
+                        <li>Feeds grass gradually over 6&ndash;10 weeks</li>
+                        <li>Lower burn risk, even in heat</li>
+                        <li>More even growth (less mowing surge)</li>
+                        <li>Look for: "slow-release," "controlled-release," "coated urea," or "sulfur-coated"</li>
+                        <li>Examples: Milorganite, Scotts Turf Builder</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Quick-Release</strong></p>
+                    <ul>
+                        <li>Fast green-up within days</li>
+                        <li>Higher burn risk if over-applied or in heat</li>
+                        <li>Causes a surge of growth (more mowing)</li>
+                        <li>Best used sparingly or in cooler temps</li>
+                        <li>Examples: urea (46-0-0), ammonium sulfate (21-0-0)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="color: var(--green-dark); margin: 28px 0 16px;">The Bermuda Fertilizer Schedule</h3>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>When</th>
+                        <th>Suggested Product (NPK)</th>
+                        <th>Rate (per 1,000 sq ft)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Late April</strong><br><span style="font-size:0.8rem;color:#78909c;">Lawn 50%+ green</span></td>
+                        <td>
+                            <strong>Scotts Turf Builder Southern</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">32-0-10</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Pennington Ultragreen <strong>30-0-4</strong></span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Lesco <strong>24-0-11</strong></span>
+                        </td>
+                        <td>~3 lbs product<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span></td>
+                        <td>Don't fertilize until Bermuda is actively green. Feeding dormant/brown grass feeds weeds, not your lawn. The 32-0-10 has potassium for spring root recovery.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Late May</strong><br><span style="font-size:0.8rem;color:#78909c;">Memorial Day</span></td>
+                        <td>
+                            <strong>Milorganite</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Scotts Southern <strong>32-0-10</strong></span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Simple Lawn Solutions <strong>28-0-0</strong></span>
+                        </td>
+                        <td>~16 lbs Milorganite<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span><br><span style="font-size:0.8rem;color:#78909c;">or ~3 lbs of 32-0-10</span></td>
+                        <td>Main spring feeding. Bermuda is growing fast now. Milorganite is gentle and adds iron for extra green color.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Late June</strong></td>
+                        <td>
+                            <strong>Milorganite</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Carbon X <strong>24-0-4</strong></span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or ammonium sulfate <strong>21-0-0</strong></span>
+                        </td>
+                        <td>~16 lbs Milorganite<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb actual N)</span><br><span style="font-size:0.8rem;color:#78909c;">or ~4.5 lbs of 21-0-0</span></td>
+                        <td>Peak growth season &amp; peak heat. Organic (Milorganite) is safest &mdash; zero burn risk. Ammonium sulfate (21-0-0) is cheap and also lowers pH, which Bermuda likes.</td>
+                    </tr>
+                    <tr style="background: #fff8e1;">
+                        <td><strong>Early July</strong><br><span style="font-size:0.8rem;color:#78909c;">July 4th</span></td>
+                        <td>
+                            <strong>Lesco</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">24-0-11</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Scotts Southern <strong>32-0-10</strong></span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or Milorganite <strong>6-4-0</strong> + muriate of potash <strong>0-0-60</strong></span>
+                        </td>
+                        <td>~4 lbs of 24-0-11<br><span style="font-size:0.8rem;color:#78909c;">(= ~1 lb N + 0.44 lb K)</span></td>
+                        <td>Bermuda's prime time. Pick a product with potassium (the last number) to start building stress &amp; heat tolerance. The 24-0-11 and 32-0-10 both include K.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Early August</strong><br><span style="font-size:0.8rem;color:#78909c;">Last N feeding!</span></td>
+                        <td>
+                            <strong>Milorganite</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">6-4-0</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or any slow-release like <strong>29-0-5</strong> or <strong>30-0-4</strong></span>
+                        </td>
+                        <td>~8 lbs Milorganite<br><span style="font-size:0.8rem;color:#78909c;">(= ~0.5 lb actual N)</span></td>
+                        <td><strong>Final nitrogen of the year.</strong> Go lighter (0.5 lb N). Must be at least 6 weeks before your first expected frost date. Milorganite is ideal &mdash; slow release won't push late-season growth.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>September</strong><br><span style="font-size:0.8rem;color:#78909c;">Labor Day</span></td>
+                        <td>
+                            <strong>Muriate of potash</strong> <span style="font-size:0.82rem;color:var(--green-dark);font-weight:700;">0-0-60</span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">or sulfate of potash <strong>0-0-50</strong></span><br>
+                            <span style="font-size:0.82rem;color:#78909c;">NO nitrogen products!</span>
+                        </td>
+                        <td>~1.7 lbs of 0-0-60<br><span style="font-size:0.8rem;color:#78909c;">(= 1 lb K2O)</span></td>
+                        <td>Potassium-only application. Hardens Bermuda for winter cold. <strong>No nitrogen</strong> &mdash; it delays dormancy and reduces cold tolerance. Sulfate of potash (0-0-50) is gentler on soil biology.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="highlight warning" style="margin-top: 16px;">
+            <strong>Measure Your Lawn!</strong> You need to know your lawn's square footage to apply the right amount. Pace off the length and width (1 stride &asymp; 3 feet) and multiply. A typical front yard is 2,000&ndash;5,000 sq ft. Over-applying fertilizer burns grass, wastes money, and pollutes waterways.
+        </div>
+
+        <div class="card">
+            <h3>How to Apply Fertilizer</h3>
+            <ul>
+                <li><strong>Use a broadcast (rotary) spreader</strong> for even coverage. Drop spreaders work too but leave visible stripes if you overlap poorly.</li>
+                <li><strong>Apply in two passes</strong> at half rate: one pass north-south, one east-west. This ensures even coverage and prevents striping.</li>
+                <li><strong>Water in after applying</strong> &mdash; give the lawn 0.25&ndash;0.5" of water within 24 hours to wash granules off the blades and into the soil. Fertilizer sitting on wet grass blades causes burns.</li>
+                <li><strong>Apply on dry grass</strong> &mdash; granules stick to wet blades and burn them. Apply when the grass is dry, then water in afterward.</li>
+                <li><strong>Don't fertilize before heavy rain</strong> &mdash; a downpour washes product into storm drains before the soil can absorb it.</li>
+                <li><strong>Clean up spills</strong> &mdash; sweep any fertilizer off sidewalks and driveways back onto the lawn. Concentrated piles will burn.</li>
+                <li><strong>Calibrate your spreader</strong> &mdash; check the bag for recommended spreader settings. Do a test run on a driveway to see the spread pattern before hitting the lawn.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Soil Testing &mdash; Don't Skip This</h3>
+            <p>A <strong>$15&ndash;20 soil test</strong> from your local county extension office tells you exactly what your soil needs. Without one, you're guessing. It reveals:</p>
+            <ul>
+                <li><strong>pH level:</strong> Bermuda prefers <strong>6.0&ndash;7.0</strong>. If soil is too acidic, add lime. Too alkaline, add sulfur.</li>
+                <li><strong>Phosphorus &amp; Potassium levels:</strong> You may not need P at all, saving money and preventing runoff.</li>
+                <li><strong>Micronutrient deficiencies:</strong> Iron deficiency is common in Bermuda and causes yellowing even when N is sufficient. An iron supplement (like Ironite or ferrous sulfate) gives a quick dark green boost without extra growth.</li>
+            </ul>
+            <p style="margin-top:10px;">Test in <strong>early spring</strong> or <strong>late summer</strong>. Results take 1&ndash;2 weeks. Most extension offices provide specific fertilizer recommendations with the results.</p>
+        </div>
+
+        <div class="highlight tip">
+            <strong>Iron for Color Without Growth:</strong> Want your Bermuda darker green without pushing extra growth? Apply <strong>ferrous sulfate</strong> or a chelated iron product. It deepens color within days without adding nitrogen. Great for a quick visual boost between fertilizer applications. Apply at 2 oz per 1,000 sq ft mixed in water, or use a granular product like Ironite.
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- PRODUCT RECOMMENDATIONS -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #c8e6c9;">&#128722;</div>
+            <h2 id="products">Product Recommendations</h2>
+        </div>
+
+        <h3 style="color: var(--green-dark); margin: 24px 0 16px;">Recommended Products</h3>
+
+        <div class="grid-2">
+            <div class="product-card">
+                <h4>Milorganite 6-4-0</h4>
+                <span class="type-tag tag-organic">Organic / Slow Release</span>
+                <p>Biosolid-based organic fertilizer. Won't burn your lawn even in summer heat. Feeds for 8&ndash;10 weeks. Perfect for Bermuda's hot-weather feedings. Use the "holiday schedule": <strong>Memorial Day, July 4th, Labor Day</strong> (but skip the Labor Day N if it's &lt;6 weeks to frost).</p>
+                <p style="margin-top:8px;"><strong>Best for:</strong> Safe summer feeding without burn risk.</p>
+            </div>
+            <div class="product-card">
+                <h4>Scotts Turf Builder Southern (32-0-10)</h4>
+                <span class="type-tag tag-synthetic">Synthetic / Slow Release</span>
+                <p>Specifically formulated for warm-season grasses like Bermuda. Higher potassium content (the "10") builds heat and drought tolerance. Apply every 6&ndash;8 weeks during the growing season.</p>
+                <p style="margin-top:8px;"><strong>Best for:</strong> Bermuda-specific balanced feeding.</p>
+            </div>
+            <div class="product-card">
+                <h4>Prodiamine 65 WDG</h4>
+                <span class="type-tag tag-synthetic">Pre-Emergent Herbicide</span>
+                <p>Professional-grade pre-emergent. Prevents crabgrass, goosegrass, and Poa annua. One application lasts 4&ndash;6 months. Apply in <strong>early spring</strong> (soil 55&deg;F) and again in <strong>early fall</strong> (for Poa annua). Very cost-effective.</p>
+                <p style="margin-top:8px;"><strong>Best for:</strong> Long-lasting weed prevention.</p>
+            </div>
+            <div class="product-card">
+                <h4>Celsius WG Herbicide</h4>
+                <span class="type-tag tag-synthetic">Post-Emergent Herbicide</span>
+                <p>One of the best post-emergent herbicides for Bermuda lawns. Safe on Bermuda even in summer heat (unlike many broadleaf killers). Kills a wide range of broadleaf and grassy weeds. Can be applied up to 95&deg;F.</p>
+                <p style="margin-top:8px;"><strong>Best for:</strong> Killing weeds in Bermuda without damaging the grass.</p>
+            </div>
+        </div>
+
+        <div class="highlight tip" style="margin-top: 20px;">
+            <strong>Pro Tip &mdash; Combo Approach:</strong> Many Bermuda enthusiasts use Milorganite as a "base layer" every 8 weeks for steady organic feeding, then supplement with a synthetic (like Scotts Southern) once or twice for a quick green boost. This gives you the best of both worlds: safe slow-release + visible results.
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- WATERING -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e3f2fd;">&#128167;</div>
+            <h2 id="watering">Watering Guide</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="card" style="border-left-color: #1565c0;">
+                <h3>How Much</h3>
+                <ul>
+                    <li>Bermuda needs <strong>1 &ndash; 1.25 inches of water per week</strong> (including rainfall)</li>
+                    <li>Apply in <strong>2&ndash;3 deep sessions</strong>, not daily light sprinkles</li>
+                    <li>Deep, infrequent watering trains roots to grow deep</li>
+                    <li>Bermuda is <strong>drought-tolerant</strong> &mdash; it will go dormant (brown) in extreme drought but bounces back when watered</li>
+                    <li>Place a tuna can on the lawn to measure sprinkler output</li>
+                </ul>
+            </div>
+            <div class="card" style="border-left-color: #1565c0;">
+                <h3>When &amp; How</h3>
+                <ul>
+                    <li><strong>Best time:</strong> Early morning (5&ndash;10 AM) before heat causes evaporation</li>
+                    <li><strong>Avoid:</strong> Evening watering &mdash; grass stays wet overnight, promoting fungal disease (Bermuda is susceptible to brown patch and dollar spot)</li>
+                    <li><strong>Signs of thirst:</strong> Bermuda folds its leaf blades inward, turns a blue-gray color, and footprints linger instead of bouncing back</li>
+                    <li>Sandy soil: shorter, more frequent watering</li>
+                    <li>Clay soil: slower application to prevent runoff</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- AERATION & DETHATCHING -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #e8f5e9;">&#127793;</div>
+            <h2 id="aeration">Aeration &amp; Dethatching</h2>
+        </div>
+
+        <div class="highlight warning">
+            <strong>Bermuda Builds Thatch Fast.</strong> Because Bermuda grows aggressively via stolons and rhizomes, it accumulates thatch faster than most grasses. If thatch exceeds 0.5 inches, water and nutrients can't reach the soil. Dethatch and aerate regularly.
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>Core Aeration</h3>
+                <ul>
+                    <li><strong>Best time:</strong> Late spring to early summer (May&ndash;June) when Bermuda is actively growing and can recover quickly</li>
+                    <li>Use a <strong>core aerator</strong> (pulls plugs), not a spike aerator</li>
+                    <li>Make 2&ndash;3 passes in different directions</li>
+                    <li>Soil should be moist, not saturated</li>
+                    <li>Leave plugs on the surface to break down</li>
+                    <li>Aerate <strong>annually</strong> for heavy clay, every 2 years for sandy soil</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Dethatching</h3>
+                <ul>
+                    <li><strong>Best time:</strong> Late spring (May) after Bermuda is fully green and growing vigorously</li>
+                    <li>Dethatch when the thatch layer exceeds <strong>0.5 inches</strong></li>
+                    <li>Use a power dethatcher (vertical mower) set to cut into the thatch but not the soil</li>
+                    <li>Bermuda recovers aggressively &mdash; it will fill in bare spots within 2&ndash;4 weeks</li>
+                    <li><strong>Never dethatch dormant Bermuda</strong> &mdash; it can't recover</li>
+                    <li>Ideal sequence: <strong>dethatch &rarr; aerate &rarr; fertilize</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 8px;">
+            <h3>What About Raking?</h3>
+            <p>Raking is a different question from dethatching, and for Bermuda lawns <strong>it's generally not recommended as a routine practice</strong>. Here's the breakdown:</p>
+
+            <div class="grid-2" style="margin-top: 14px;">
+                <div class="highlight" style="margin: 0;">
+                    <strong>When You SHOULD Rake</strong>
+                    <ul style="padding-left: 18px; margin-top: 8px;">
+                        <li><strong>After the spring scalp</strong> &mdash; rake or bag up the dead material you just cut so sunlight reaches the soil</li>
+                        <li><strong>Leaf removal in fall</strong> &mdash; a thick layer of leaves smothers dormant Bermuda and traps moisture, leading to fungal disease</li>
+                        <li><strong>Debris cleanup</strong> &mdash; sticks, pine straw, or storm debris sitting on the lawn</li>
+                        <li><strong>Before overseeding</strong> &mdash; if you winter-overseed with ryegrass, raking first improves seed-to-soil contact</li>
+                    </ul>
+                </div>
+                <div class="highlight warning" style="margin: 0;">
+                    <strong>When You Should NOT Rake</strong>
+                    <ul style="padding-left: 18px; margin-top: 8px;">
+                        <li><strong>Regular grass clippings</strong> &mdash; leave them! Mulched clippings return nitrogen to the soil (up to 25% of fertilizer needs) and break down fast</li>
+                        <li><strong>During active growth</strong> &mdash; aggressive raking can rip up Bermuda's shallow stolons and damage the turf</li>
+                        <li><strong>As a substitute for dethatching</strong> &mdash; a hand rake can't remove true thatch (the spongy layer below the blades). You need a power dethatcher for that.</li>
+                        <li><strong>Frozen/dormant lawn</strong> &mdash; raking dormant Bermuda in winter can tear crowns and thin the lawn come spring</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight tip" style="margin-top: 14px; margin-bottom: 0;">
+                <strong>Bottom line:</strong> For Bermuda, raking is a <em>situational cleanup tool</em> (spring scalp debris, fall leaves), not a regular maintenance step. During the growing season, your mower's mulching function handles clippings, and a power dethatcher handles thatch. Raking for the sake of raking just risks damaging the stolons that make Bermuda spread and fill in.
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- QUICK REFERENCE TABLE -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #fff8e1;">&#9889;</div>
+            <h2 id="summary">Quick-Reference Summary</h2>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Mow Height</th>
+                        <th>Fertilize</th>
+                        <th>Weed Control</th>
+                        <th>Other Tasks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fff8e1;">
+                        <td><strong>March</strong></td>
+                        <td>Scalp to 0.5&ndash;1"</td>
+                        <td>None</td>
+                        <td>Pre-emergent (soil 55&deg;F)</td>
+                        <td><strong>Spring scalp</strong>, soil test, mower prep</td>
+                    </tr>
+                    <tr>
+                        <td><strong>April</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td>0.5&ndash;1 lb N (when 50%+ green)</td>
+                        <td>Spot-treat broadleaf</td>
+                        <td>First regular mow</td>
+                    </tr>
+                    <tr>
+                        <td><strong>May</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td>0.5&ndash;1 lb N</td>
+                        <td>Spot-treat as needed</td>
+                        <td>Dethatch &amp; aerate if needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>June</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td>0.5&ndash;1 lb N</td>
+                        <td>&mdash;</td>
+                        <td>Grub preventer</td>
+                    </tr>
+                    <tr style="background: #fff8e1;">
+                        <td><strong>July</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td><strong>0.5&ndash;1 lb N (prime time!)</strong></td>
+                        <td>&mdash;</td>
+                        <td>Water deeply, K boost if needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>August</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td><strong>Last N application</strong></td>
+                        <td>Spot-treat</td>
+                        <td>6 wks before frost = N cutoff</td>
+                    </tr>
+                    <tr>
+                        <td><strong>September</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td>Potassium only (1 lb K2O)</td>
+                        <td><strong>Fall pre-emergent</strong> (Poa annua)</td>
+                        <td>No more nitrogen!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>October</strong></td>
+                        <td>1 &ndash; 2"</td>
+                        <td>None</td>
+                        <td>&mdash;</td>
+                        <td>Mulch leaves</td>
+                    </tr>
+                    <tr>
+                        <td><strong>November</strong></td>
+                        <td>1 &ndash; 2" (final cut)</td>
+                        <td>None</td>
+                        <td>&mdash;</td>
+                        <td>Final mow, winterize mower</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dec&ndash;Feb</strong></td>
+                        <td>&mdash;</td>
+                        <td>None</td>
+                        <td>&mdash;</td>
+                        <td>Stay off frozen grass, plan spring</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============================================ -->
+    <!-- PROBLEM DIAGNOSIS GUIDE -->
+    <!-- ============================================ -->
+    <section>
+        <div class="section-header">
+            <div class="icon" style="background: #fce4ec;">&#128269;</div>
+            <h2 id="problems">Lawn Problem Diagnosis &amp; Fixes</h2>
+        </div>
+        <p style="color:#607d8b; margin-bottom: 24px;">See something wrong? Find the symptom below and follow the fix.</p>
+
+        <!-- WEEDS -->
+        <h3 style="color: var(--green-dark); margin: 0 0 16px; font-size: 1.25rem;">Weed Problems</h3>
+
+        <div class="card" style="border-left-color: #c62828;">
+            <h3 style="color: #c62828;">Crabgrass <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; low-growing, light green, spreading clumps</span></h3>
+            <div class="img-row">
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Crabgrass.JPG" alt="Crabgrass growing in lawn">
+                    <p class="img-caption">Crabgrass spreading along the ground</p>
+                </div>
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Harig_vingergras_plant_%28Digitaria_sanguinalis%29.jpg" alt="Crabgrass plant closeup">
+                    <p class="img-caption">Crabgrass plant &mdash; note the star-like spreading stems</p>
+                </div>
+            </div>
+            <div class="grid-2" style="margin-top: 8px;">
+                <div>
+                    <p><strong>Prevent It (Best Approach):</strong></p>
+                    <ul>
+                        <li>Apply <strong>pre-emergent</strong> in early spring when soil hits 55&deg;F</li>
+                        <li>Products: <strong>Prodiamine 65 WDG</strong>, Scotts Halts, or Dimension (dithiopyr)</li>
+                        <li>A second application 6&ndash;8 weeks later extends protection</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Kill Existing Crabgrass:</strong></p>
+                    <ul>
+                        <li><strong>Quinclorac</strong> (Drive XLR8) &mdash; safe on Bermuda, kills crabgrass post-emergent</li>
+                        <li>Apply when crabgrass is young (2&ndash;4 tillers). Large mature plants are harder to kill.</li>
+                        <li>Add a surfactant for better adhesion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-left-color: #c62828;">
+            <h3 style="color: #c62828;">Clover <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; low, round 3-leaf clusters with white flowers</span></h3>
+            <div class="img-row">
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/TrifoliumRepensFlowers.jpg" alt="White clover with flowers in lawn">
+                    <p class="img-caption">White clover &mdash; 3-leaf clusters with white puffball flowers</p>
+                </div>
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Trifolium_repens_inflorescence_-_Niitv%C3%A4lja.jpg" alt="White clover flower closeup">
+                    <p class="img-caption">Closeup of clover flower head</p>
+                </div>
+            </div>
+            <div class="grid-2" style="margin-top: 8px;">
+                <div>
+                    <p><strong>Why It's There:</strong></p>
+                    <ul>
+                        <li>Clover thrives in <strong>low-nitrogen soils</strong>. It's a sign your lawn needs more fertilizer.</li>
+                        <li>It also appears in thin, patchy areas where Bermuda isn't dense enough to crowd it out.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>How to Fix:</strong></p>
+                    <ul>
+                        <li><strong>Increase nitrogen</strong> &mdash; a well-fed Bermuda lawn chokes out clover naturally</li>
+                        <li>Spot-spray with <strong>Celsius WG</strong> or any <strong>triclopyr-based herbicide</strong> (safe on Bermuda)</li>
+                        <li>Avoid 2,4-D + dicamba combos in summer heat &mdash; they can stress Bermuda above 85&deg;F</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-left-color: #c62828;">
+            <h3 style="color: #c62828;">Dandelions <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; yellow flowers, jagged leaves, deep taproot</span></h3>
+            <div class="img-row" style="margin-top: 8px;">
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/2019-04-20_12_15_16_Lawn_with_clover_and_dandelions_along_Hidden_Meadow_Drive_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg" alt="Dandelions in lawn">
+                    <p class="img-caption">Dandelions scattered across a lawn</p>
+                </div>
+                <div class="text-side">
+                    <p><strong>Fix:</strong> Spot-spray with <strong>Celsius WG</strong>, <strong>2,4-D broadleaf killer</strong>, or <strong>Spectracide Weed Stop</strong> when temps are 60&ndash;85&deg;F and dandelions are actively growing. They pull easily by hand too &mdash; use a dandelion puller tool to get the whole taproot. Preventing them: a thick, well-fed Bermuda lawn leaves no room for dandelion seeds to establish.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-left-color: #c62828;">
+            <h3 style="color: #c62828;">Poa Annua (Annual Bluegrass) <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; light green patches, seed heads in spring</span></h3>
+            <div class="img-row" style="margin-top: 8px;">
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Poa-annua-total.JPG" alt="Poa annua in lawn">
+                    <p class="img-caption">Poa annua &mdash; lighter green clumps with white seed heads</p>
+                </div>
+                <div class="text-side">
+                    <p><strong>Fix:</strong> Poa annua is Bermuda's #1 winter weed enemy. It germinates in fall when Bermuda goes dormant. <strong>Prevention is the only real solution:</strong> apply a <strong>fall pre-emergent</strong> (Prodiamine or Barricade) in September when soil temps drop to 70&deg;F. Once it's established, there's no selective herbicide that kills it without harming Bermuda. The good news: it dies on its own in summer heat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-left-color: #c62828;">
+            <h3 style="color: #c62828;">Nutsedge <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; bright yellow-green, grows faster than grass, triangular stem</span></h3>
+            <div class="img-row" style="margin-top: 8px;">
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Cyperus_esculentis_in_a_lawn.jpg" alt="Nutsedge growing in lawn">
+                    <p class="img-caption">Yellow nutsedge in a lawn &mdash; note the bright green color vs surrounding grass</p>
+                </div>
+                <div class="text-side">
+                    <p><strong>Fix:</strong> Nutsedge is NOT a grass &mdash; it's a sedge, so regular herbicides don't work. Use <strong>SedgeHammer</strong> (halosulfuron) or <strong>Dismiss</strong> (sulfentrazone). Both are safe on Bermuda. Apply when nutsedge is actively growing (summer). It spreads by underground tubers (nutlets), so persistence over 2&ndash;3 seasons may be needed to fully eliminate it.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LAWN APPEARANCE ISSUES -->
+        <h3 style="color: var(--green-dark); margin: 28px 0 16px; font-size: 1.25rem;">Lawn Color &amp; Appearance Issues</h3>
+
+        <div class="card" style="border-left-color: var(--orange);">
+            <h3 style="color: var(--orange);">Brown Patches <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; circular dead-looking areas</span></h3>
+            <div class="img-row">
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Brown_Patch.jpg" alt="Brown patch fungus on lawn">
+                    <p class="img-caption">Brown patch fungus &mdash; circular dead patch with darker ring at edge</p>
+                </div>
+                <div class="img-side">
+                    <img class="problem-img" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Dollarspot.jpg" alt="Dollar spot on turf">
+                    <p class="img-caption">Dollar spot &mdash; small silver-dollar-sized tan spots</p>
+                </div>
+            </div>
+            <div class="grid-2" style="margin-top: 8px;">
+                <div>
+                    <p><strong>Possible Causes:</strong></p>
+                    <ul>
+                        <li><strong>Brown Patch fungus</strong> &mdash; circular patches with dark outer ring, common in humid weather with night temps above 68&deg;F</li>
+                        <li><strong>Dollar Spot</strong> &mdash; small silver-dollar-sized tan spots, common when nitrogen is low</li>
+                        <li><strong>Grub damage</strong> &mdash; turf pulls up like a carpet (grubs eat roots). Worst in late summer/fall.
+                            <br><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Jblarva.jpg" alt="White lawn grub" style="width:120px; height:80px; object-fit:cover; border-radius:6px; margin-top:6px; border:1px solid #e0e0e0;">
+                            <span style="font-size:0.72rem;color:#90a4ae;display:block;">White grub (Japanese beetle larva) &mdash; C-shaped, found just below soil surface</span>
+                        </li>
+                        <li><strong>Scalping</strong> &mdash; cutting too low in one spot (uneven ground or dull blades)</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Fixes:</strong></p>
+                    <ul>
+                        <li><strong>Fungus:</strong> Apply a fungicide containing <strong>azoxystrobin</strong> (Heritage, Scott's DiseaseEx) or <strong>propiconazole</strong>. Reduce evening watering.</li>
+                        <li><strong>Dollar Spot:</strong> Increase nitrogen feeding &mdash; it often resolves on its own with proper fertilization.</li>
+                        <li><strong>Grubs:</strong> Apply <strong>GrubEx</strong> (chlorantraniliprole) preventively in June, or <strong>Dylox</strong> (trichlorfon) as a curative if grubs are already present. Pull up a section of turf &mdash; more than 5 grubs per sq ft = treatment needed.</li>
+                        <li><strong>Scalping:</strong> Level low spots with sand topdressing over time. Raise your mow height slightly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-left-color: var(--orange);">
+            <h3 style="color: var(--orange);">Entire Lawn Turning Yellow <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; general yellowing, not patchy</span></h3>
+            <div class="grid-2" style="margin-top: 8px;">
+                <div>
+                    <p><strong>Possible Causes:</strong></p>
+                    <ul>
+                        <li><strong>Iron deficiency</strong> &mdash; very common in Bermuda, especially in alkaline soils (pH above 7)</li>
+                        <li><strong>Nitrogen deficiency</strong> &mdash; hasn't been fed recently</li>
+                        <li><strong>Overwatering</strong> &mdash; roots are drowning, can't uptake nutrients</li>
+                        <li><strong>Compacted soil</strong> &mdash; roots can't expand</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Fixes:</strong></p>
+                    <ul>
+                        <li><strong>Iron:</strong> Apply <strong>ferrous sulfate</strong> (2 oz per 1,000 sq ft in water) or <strong>Ironite</strong>. Green-up in 2&ndash;3 days.</li>
+                        <li><strong>Nitrogen:</strong> Apply a balanced fertilizer per the schedule above.</li>
+                        <li><strong>Overwatering:</strong> Cut back to 1&ndash;1.25" per week. Let the top inch of soil dry between waterings.</li>
+                        <li><strong>Compaction:</strong> Core aerate in late spring.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-left-color: var(--orange);">
+            <h3 style="color: var(--orange);">Thin / Patchy Bermuda <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; bare spots, not filling in</span></h3>
+            <p style="margin-top: 8px;"><strong>Causes &amp; Fixes:</strong></p>
+            <ul>
+                <li><strong>Not enough sun:</strong> Bermuda needs 6&ndash;8+ hours of direct sun. Shaded areas will always be thin. Consider replacing deep shade spots with a shade-tolerant ground cover or mulch.</li>
+                <li><strong>Soil compaction:</strong> Core aerate and topdress with sand. Bermuda stolons can't spread through brick-hard soil.</li>
+                <li><strong>Under-fertilized:</strong> Bermuda needs 2&ndash;4 lbs N/year. If you're under-feeding, it won't spread aggressively.</li>
+                <li><strong>Mowing too infrequently:</strong> Frequent low mowing stimulates lateral growth. If you only mow every 2 weeks, Bermuda grows tall instead of spreading.</li>
+                <li><strong>For bare spots:</strong> Bermuda fills in on its own if conditions are right (sun, water, fertilizer, low mow). For faster results, apply <strong>Bermuda seed</strong> or <strong>plugs</strong> in late spring/early summer when soil temps are above 65&deg;F.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-left-color: var(--orange);">
+            <h3 style="color: var(--orange);">White / Ragged Blade Tips <span style="font-weight:400;font-size:0.85rem;color:#78909c;">&mdash; shredded-looking grass tips</span></h3>
+            <!-- Visual: sharp vs dull blade cut comparison -->
+            <div style="display:flex; gap:24px; justify-content:center; margin:16px 0; flex-wrap:wrap;">
+                <div style="text-align:center;">
+                    <div style="width:80px; height:100px; margin:0 auto;">
+                        <div style="width:12px; height:70px; background:linear-gradient(to top,#2e7d32,#4caf50); margin:0 auto; border-radius:2px 2px 0 0;"></div>
+                        <div style="width:12px; height:4px; background:#4caf50; margin:0 auto; border-radius:0 0 0 0; clip-path: polygon(0 0, 100% 0, 50% 100%);"></div>
+                    </div>
+                    <span style="font-size:0.82rem; font-weight:700; color:var(--green-dark);">Sharp Blade</span><br>
+                    <span style="font-size:0.75rem; color:#78909c;">Clean, straight cut<br>Heals quickly, stays green</span>
+                </div>
+                <div style="font-size:2rem; color:#ccc; align-self:center; padding-top:0;">vs</div>
+                <div style="text-align:center;">
+                    <div style="width:80px; height:100px; margin:0 auto;">
+                        <div style="width:12px; height:70px; background:linear-gradient(to top,#5d4037,#8d6e63); margin:0 auto; border-radius:2px 2px 0 0;"></div>
+                        <div style="width:18px; height:10px; background:#8d6e63; margin:0 auto; clip-path: polygon(0 0, 30% 60%, 50% 20%, 80% 80%, 100% 0, 70% 100%, 20% 90%);"></div>
+                    </div>
+                    <span style="font-size:0.82rem; font-weight:700; color:#c62828;">Dull Blade</span><br>
+                    <span style="font-size:0.75rem; color:#78909c;">Torn, shredded tips<br>Turn white/brown in 1&ndash;2 days</span>
+                </div>
+            </div>
+            <p><strong>Cause:</strong> Dull mower blades. Instead of a clean cut, they're tearing the grass. The ragged edges lose moisture, turn white, then brown &mdash; making the whole lawn look hazy or washed out from a distance.</p>
+            <p style="margin-top:8px;"><strong>Fix:</strong> Sharpen your blades. This is the single easiest improvement you can make. Sharpen every 20&ndash;25 hours of use, or swap to a fresh blade mid-season. A sharp blade makes an immediate visible difference.</p>
+        </div>
+
+        <!-- QUICK LOOKUP TABLE -->
+        <h3 style="color: var(--green-dark); margin: 28px 0 16px; font-size: 1.25rem;">Quick Lookup: Problem &rarr; Product</h3>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Product to Use</th>
+                        <th>When to Apply</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Crabgrass (prevent)</td>
+                        <td>Prodiamine 65 WDG, Scotts Halts, Dimension</td>
+                        <td>Early spring, soil 55&deg;F</td>
+                    </tr>
+                    <tr>
+                        <td>Crabgrass (kill existing)</td>
+                        <td>Quinclorac (Drive XLR8)</td>
+                        <td>When crabgrass is young, actively growing</td>
+                    </tr>
+                    <tr>
+                        <td>Clover, dandelions, broadleaf weeds</td>
+                        <td>Celsius WG, Spectracide Weed Stop, triclopyr</td>
+                        <td>Temps 60&ndash;85&deg;F, weeds actively growing</td>
+                    </tr>
+                    <tr>
+                        <td>Poa annua (prevent)</td>
+                        <td>Prodiamine, Barricade</td>
+                        <td>Fall, soil temps dropping to 70&deg;F</td>
+                    </tr>
+                    <tr>
+                        <td>Nutsedge</td>
+                        <td>SedgeHammer, Dismiss</td>
+                        <td>Summer, nutsedge actively growing</td>
+                    </tr>
+                    <tr>
+                        <td>Brown Patch / Dollar Spot (fungus)</td>
+                        <td>Scott's DiseaseEx, propiconazole</td>
+                        <td>At first sign of symptoms</td>
+                    </tr>
+                    <tr>
+                        <td>Grubs (prevent)</td>
+                        <td>GrubEx (chlorantraniliprole)</td>
+                        <td>Mid-June, preventive</td>
+                    </tr>
+                    <tr>
+                        <td>Grubs (kill active)</td>
+                        <td>Dylox (trichlorfon)</td>
+                        <td>When grubs found (&gt;5 per sq ft)</td>
+                    </tr>
+                    <tr>
+                        <td>Yellow lawn / iron deficiency</td>
+                        <td>Ferrous sulfate, Ironite, chelated iron</td>
+                        <td>Anytime during growing season</td>
+                    </tr>
+                    <tr>
+                        <td>General feeding</td>
+                        <td>Milorganite, Scotts Southern, 32-0-10</td>
+                        <td>April&ndash;August, every 4&ndash;6 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>Winter hardiness (fall)</td>
+                        <td>Muriate of potash (0-0-60)</td>
+                        <td>September, no nitrogen</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PRINTABLE CHEAT SHEET -->
+    <!-- ============================================ -->
+    <div class="cheat-sheet-page">
+        <hr class="divider">
+        <div class="cheat-sheet" id="cheatsheet">
+            <h2>BERMUDA GRASS CHEAT SHEET</h2>
+            <p class="cs-subtitle">Print this page and stick it on your garage wall</p>
+
+            <!-- Golden Rules -->
+            <div class="cs-rules">
+                <div class="cs-rule">Mow at 1&ndash;2"</div>
+                <div class="cs-rule">Never cut more than 1/3</div>
+                <div class="cs-rule">Fertilize Apr&ndash;Aug only</div>
+                <div class="cs-rule">Stop N 6 wks before frost</div>
+                <div class="cs-rule">Water 1&ndash;1.25"/week</div>
+                <div class="cs-rule">Sharpen blades every 3 wks</div>
+            </div>
+
+            <!-- Month-by-month compact table -->
+            <h4 style="color:var(--green-dark); margin: 18px 0 8px; font-size: 0.95rem;">Monthly Calendar</h4>
+            <table style="width:100%; border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Mow</th>
+                        <th>Feed (per 1K sq ft)</th>
+                        <th>Weed / Other</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background:#fff8e1;">
+                        <td><strong>Mar</strong></td>
+                        <td>Scalp 0.5&ndash;1"</td>
+                        <td>None</td>
+                        <td>Pre-emergent @ soil 55&deg;F &bull; Soil test</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apr</strong></td>
+                        <td>1&ndash;2" / 7&ndash;10 days</td>
+                        <td>0.5&ndash;1 lb N &bull; <em>32-0-10</em></td>
+                        <td>Spot-treat broadleaf (Celsius WG)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>May</strong></td>
+                        <td>1&ndash;2" / 5&ndash;7 days</td>
+                        <td>0.5&ndash;1 lb N &bull; <em>Milorganite or 32-0-10</em></td>
+                        <td>Dethatch &amp; aerate if needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jun</strong></td>
+                        <td>1&ndash;2" / 4&ndash;5 days</td>
+                        <td>0.5&ndash;1 lb N &bull; <em>Milorganite or 21-0-0</em></td>
+                        <td>GrubEx mid-month</td>
+                    </tr>
+                    <tr style="background:#fff8e1;">
+                        <td><strong>Jul</strong></td>
+                        <td>1&ndash;2" / 4&ndash;5 days</td>
+                        <td>0.5&ndash;1 lb N + K &bull; <em>24-0-11</em></td>
+                        <td>Water deeply &bull; Peak season!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aug</strong></td>
+                        <td>1&ndash;2" / 5&ndash;7 days</td>
+                        <td>0.5 lb N (LAST!) &bull; <em>Milorganite</em></td>
+                        <td>Spot-treat weeds</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sep</strong></td>
+                        <td>1&ndash;2" / 7&ndash;10 days</td>
+                        <td>1 lb K2O only &bull; <em>0-0-60</em></td>
+                        <td>Fall pre-emergent (Poa annua)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oct</strong></td>
+                        <td>As needed</td>
+                        <td>None</td>
+                        <td>Mulch leaves</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nov</strong></td>
+                        <td>Final cut 1&ndash;2"</td>
+                        <td>None</td>
+                        <td>Winterize mower</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dec&ndash;Feb</strong></td>
+                        <td>&mdash;</td>
+                        <td>None</td>
+                        <td>Stay off frozen lawn</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Quick-ref boxes -->
+            <div class="cs-grid">
+                <div class="cs-box">
+                    <h4>Fertilizer Products (NPK)</h4>
+                    <ul>
+                        <li><strong>Scotts Southern</strong> &mdash; 32-0-10</li>
+                        <li><strong>Milorganite</strong> &mdash; 6-4-0 (organic)</li>
+                        <li><strong>Lesco</strong> &mdash; 24-0-11</li>
+                        <li><strong>Ammonium sulfate</strong> &mdash; 21-0-0</li>
+                        <li><strong>Pennington Ultragreen</strong> &mdash; 30-0-4</li>
+                        <li><strong>Muriate of potash</strong> &mdash; 0-0-60</li>
+                    </ul>
+                </div>
+                <div class="cs-box">
+                    <h4>Weed &amp; Pest Products</h4>
+                    <ul>
+                        <li><strong>Prodiamine 65 WDG</strong> &mdash; pre-emergent (spring + fall)</li>
+                        <li><strong>Celsius WG</strong> &mdash; post-emergent broadleaf (Bermuda-safe)</li>
+                        <li><strong>Quinclorac</strong> &mdash; kills crabgrass</li>
+                        <li><strong>SedgeHammer</strong> &mdash; kills nutsedge</li>
+                        <li><strong>GrubEx</strong> &mdash; grub prevention (June)</li>
+                        <li><strong>DiseaseEx</strong> &mdash; fungicide (brown patch)</li>
+                    </ul>
+                </div>
+                <div class="cs-box">
+                    <h4>N Calculation</h4>
+                    <ul>
+                        <li>Lbs of product = Desired N &divide; (N% &divide; 100)</li>
+                        <li><strong>32-0-10:</strong> 3.1 lbs = 1 lb N</li>
+                        <li><strong>Milorganite:</strong> 16.7 lbs = 1 lb N</li>
+                        <li><strong>21-0-0:</strong> 4.8 lbs = 1 lb N</li>
+                        <li><strong>24-0-11:</strong> 4.2 lbs = 1 lb N</li>
+                    </ul>
+                </div>
+                <div class="cs-box">
+                    <h4>Key Reminders</h4>
+                    <ul>
+                        <li>Spring scalp: 50% of target height, bag clippings</li>
+                        <li>Mulch clippings rest of year (free N!)</li>
+                        <li>Water early AM, never evening</li>
+                        <li>Bermuda turns brown in winter &mdash; it's not dead</li>
+                        <li>Soil test = best $15 you'll spend</li>
+                        <li>Iron (ferrous sulfate) = dark green, no extra growth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Generated March 2026 &bull; Tailored for Bermuda grass based on university extension research</p>
+        <p style="margin-top:8px;">Sources:
+            <a href="https://hgic.clemson.edu/factsheet/bermudagrass-maintenance-calendar/" target="_blank">Clemson Extension</a> &bull;
+            <a href="https://content.ces.ncsu.edu/bermudagrass-lawn-maintenance-calendar" target="_blank">NC State Extension</a> &bull;
+            <a href="https://agrilifeextension.tamu.edu/library/landscaping/bermudagrass-home-lawn-management-calendar/" target="_blank">Texas A&amp;M AgriLife</a> &bull;
+            <a href="https://extension.uga.edu/content/dam/extension-county-offices/gwinnett-county/anr/homeshow-resources/lawn-calendars/BermudagrassLawnCalendar.pdf" target="_blank">UGA Extension</a> &bull;
+            <a href="https://news.okstate.edu/articles/agriculture/2020/stotts_bermudagrass-mowing.html" target="_blank">Oklahoma State</a> &bull;
+            <a href="https://www.canr.msu.edu/news/timing_crabgrass_pre_emergence_applications" target="_blank">MSU Extension</a> &bull;
+            <a href="https://www.milorganite.com/what-is-milorganite/rates-and-schedule" target="_blank">Milorganite</a> &bull;
+            <a href="https://scotts.com/en-us/lawn-care-101/spring-lawn-care-tips.html" target="_blank">Scotts</a> &bull;
+            <a href="https://www.trugreen.com/lawn-care-101/blog/lawn-care-tips/mowing-heights-season-and-grass-type" target="_blank">TruGreen</a> &bull;
+            <a href="https://www.familyhandyman.com/article/first-lawn-mowing-in-spring/" target="_blank">Family Handyman</a>
+        </p>
+    </footer>
+
+</div><!-- end container -->
+
+</body>
+</html>
