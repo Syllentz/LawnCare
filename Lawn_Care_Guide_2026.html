@@ -99,6 +99,13 @@
             font-weight: 700;
             color: var(--green-dark);
         }
+        section > h2 {
+            font-size: 1.4rem;
+            color: var(--green-dark);
+            margin-bottom: 14px;
+            padding-bottom: 4px;
+            border-bottom: 3px solid var(--green-pale);
+        }
 
         /* CARDS */
         .card {
@@ -265,6 +272,8 @@
             .timeline-item { padding: 18px 16px; }
             .timeline-item::before { left: -21px; width: 10px; height: 10px; }
             .timeline::before { left: 10px; }
+            .action-header { padding: 12px 16px; }
+            .action-body { padding: 0 16px 14px; }
             th { padding: 10px 10px; font-size: 0.8rem; }
             td { padding: 10px 10px; font-size: 0.82rem; }
 
@@ -531,6 +540,17 @@
             min-width: 140px;
         }
 
+        /* ACTION CARDS */
+        .action { background: white; border-radius: 14px; box-shadow: var(--card-shadow); margin-bottom: 16px; overflow: hidden; }
+        .action-header { padding: 14px 22px; display: flex; align-items: center; gap: 14px; }
+        .action-month { font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 16px; background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
+        .action-month-hl { background: #fff8e1; color: #f57f17; }
+        .action-title { font-size: 1.05rem; font-weight: 700; color: var(--green-dark); }
+        .action-body { padding: 0 22px 18px; }
+        .action-body ul { padding-left: 18px; margin-top: 6px; }
+        .action-body li { margin-bottom: 4px; font-size: 0.93rem; color: #455a64; }
+        .action-note { font-size: 0.82rem; color: #78909c; margin-top: 8px; padding: 8px 12px; background: #f5f5f5; border-radius: 8px; }
+
         /* PRINT / PDF STYLES */
         @media print {
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
@@ -544,7 +564,7 @@
             .toc-bar { display: none; }
             .container { max-width: 100%; padding: 0 15px; }
             section { margin: 20px 0; }
-            .card, .timeline-item, .product-card, .cheat-sheet {
+            .card, .timeline-item, .action, .product-card, .cheat-sheet {
                 box-shadow: none;
                 border: 1px solid #ddd;
                 break-inside: avoid;
@@ -622,10 +642,7 @@
     <!-- BERMUDA BASICS -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e8f5e9;">&#127808;</div>
-            <h2 id="basics">Bermuda Grass at a Glance</h2>
-        </div>
+        <h2 id="basics">Bermuda Grass at a Glance</h2>
 
         <div style="text-align:center; margin-bottom: 20px;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Bermuda_grass_%28Cynodon_dactylon%29.jpg" alt="Healthy bermuda grass lawn" style="width:100%; max-width:700px; height:260px; object-fit:cover; border-radius:14px; box-shadow: var(--card-shadow);">
@@ -664,10 +681,7 @@
     <!-- MOWING HEIGHT -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e8f5e9;">&#9986;</div>
-            <h2 id="mowing-height">Mowing Height &amp; the Spring Scalp</h2>
-        </div>
+        <h2 id="mowing-height">Mowing Height &amp; the Spring Scalp</h2>
 
         <div class="highlight">
             <strong>Yes, Cut It Short!</strong> Bermuda grass <em>wants</em> to be mowed low. Unlike fescue or bluegrass (which prefer 3&ndash;4"), Bermuda performs best at <strong>1&ndash;2 inches</strong> with a rotary mower. If you have a reel mower, you can maintain it as low as 0.5&ndash;1". Lower heights produce a denser, more carpet-like lawn.
@@ -732,10 +746,7 @@
     <!-- MOWING BEST PRACTICES -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e8f5e9;">&#9881;</div>
-            <h2 id="mowing-tips">Mowing Best Practices</h2>
-        </div>
+        <h2 id="mowing-tips">Mowing Best Practices</h2>
 
         <div class="grid-2">
             <div class="card">
@@ -778,18 +789,16 @@
     <!-- MONTH-BY-MONTH CALENDAR -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e8f5e9;">&#128197;</div>
-            <h2 id="calendar">2026 Month-by-Month Bermuda Calendar</h2>
-        </div>
+        <h2 id="calendar">2026 Month-by-Month Bermuda Calendar</h2>
         <p style="color:#607d8b; margin-bottom: 24px;">Tailored for Cypress, TX (77433) &mdash; USDA Zone 9a, Houston area. Dates reflect local soil temperatures and frost windows (avg last frost mid-February, avg first frost mid-December).</p>
 
-        <div class="timeline">
-
-            <!-- MARCH -->
-            <div class="timeline-item" style="border-left: 3px solid var(--gold);">
-                <span class="month-tag" style="background:#fff8e1; color:#f57f17;">LATE FEB &ndash; MARCH</span>
-                <h3>Wake-Up &amp; Spring Scalp</h3>
+        <!-- MARCH -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month action-month-hl">LATE FEB &ndash; MARCH</span>
+                <span class="action-title">Wake-Up &amp; Spring Scalp</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Pre-emergent herbicide (late Feb &ndash; early March):</strong> In the Houston area, soil can hit 55&deg;F as early as late February. Apply pre-emergent when soil temps reach 55&deg;F at 2" depth. Natural cue: forsythia blooming. This prevents crabgrass and goosegrass. Try to apply before a rain.</li>
                     <li><strong>Spring scalp (late March):</strong> After the last hard freeze (usually mid-February in Cypress, but wait for any late cold snaps), scalp the lawn down to 0.5&ndash;1" (50% of your target height). <strong>Bag all clippings.</strong> This removes dead thatch and lets sun warm the soil for faster green-up.</li>
@@ -798,11 +807,15 @@
                     <li><strong>Do NOT fertilize yet</strong> &mdash; Bermuda is still waking up. Feeding now wastes product and can feed weeds instead.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- APRIL -->
-            <div class="timeline-item">
-                <span class="month-tag">APRIL</span>
-                <h3>Green-Up &amp; First Feeding</h3>
+        <!-- APRIL -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">APRIL</span>
+                <span class="action-title">Green-Up &amp; First Feeding</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Watch for green-up:</strong> In Cypress, Bermuda typically starts greening in mid-to-late March as soil temps climb above 65&deg;F. By April, green-up should be well underway.</li>
                     <li><strong>First real mow:</strong> Once greening is well underway, begin regular mowing at your target height (1&ndash;2"). Mow every 7&ndash;10 days.</li>
@@ -810,11 +823,15 @@
                     <li><strong>Spot-treat weeds:</strong> Post-emergent herbicide for any broadleaf weeds (dandelions, clover, henbit). Apply when temps are 60&ndash;85&deg;F. Use products labeled safe for Bermuda.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- MAY -->
-            <div class="timeline-item">
-                <span class="month-tag">MAY</span>
-                <h3>Growth Accelerates</h3>
+        <!-- MAY -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">MAY</span>
+                <span class="action-title">Growth Accelerates</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Mowing:</strong> Increase to <strong>every 5&ndash;7 days</strong>. Maintain 1&ndash;2" height. Bermuda is growing fast now.</li>
                     <li><strong>Fertilize (Memorial Day):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. This is your main spring feeding. Use a slow-release or blended fertilizer.</li>
@@ -822,11 +839,15 @@
                     <li><strong>Begin watering routine:</strong> If rain is scarce, provide <strong>1&ndash;1.25" per week</strong> in 2&ndash;3 deep sessions.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- JUNE -->
-            <div class="timeline-item">
-                <span class="month-tag">JUNE</span>
-                <h3>Full Throttle Growth</h3>
+        <!-- JUNE -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">JUNE</span>
+                <span class="action-title">Full Throttle Growth</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Mowing:</strong> This is peak growth. You may need to mow <strong>every 4&ndash;5 days</strong> to keep up. Do not skip mows &mdash; Bermuda gets thatchy fast.</li>
                     <li><strong>Fertilize:</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. Bermuda is a heavy feeder and loves summer nitrogen.</li>
@@ -834,11 +855,15 @@
                     <li><strong>Water:</strong> 1&ndash;1.25" per week. Water early morning (before 10 AM).</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- JULY -->
-            <div class="timeline-item" style="border-left: 3px solid var(--gold);">
-                <span class="month-tag" style="background:#fff8e1; color:#f57f17;">JULY &mdash; BERMUDA'S PRIME TIME</span>
-                <h3>Peak Performance</h3>
+        <!-- JULY -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month action-month-hl">JULY &mdash; BERMUDA'S PRIME TIME</span>
+                <span class="action-title">Peak Performance</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Mowing:</strong> Continue every 4&ndash;5 days at 1&ndash;2". Bermuda <em>thrives</em> in summer heat &mdash; this is when it looks its best.</li>
                     <li><strong>Fertilize (July 4th):</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. <a href="https://www.homedepot.com/p/Milorganite-32-lbs-2-500-sq-ft-Organic-Plant-Fertilizer-Slow-Release-Nitrogen-Garden-and-Lawn-Fertilizer-6-4-0-100539618/308888983" target="_blank" style="color:inherit; text-decoration:underline;">Milorganite</a> is a great organic option &mdash; it won't burn in the heat.</li>
@@ -846,11 +871,15 @@
                     <li><strong>Water deeply</strong> if rainfall is insufficient. Bermuda is drought-tolerant but performs best with consistent moisture.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- AUGUST -->
-            <div class="timeline-item">
-                <span class="month-tag">AUGUST</span>
-                <h3>Mid-Summer Feeding</h3>
+        <!-- AUGUST -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">AUGUST</span>
+                <span class="action-title">Mid-Summer Feeding</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Mowing:</strong> Still every 5&ndash;7 days at 1&ndash;2".</li>
                     <li><strong>Fertilize:</strong> Apply <strong>0.5&ndash;1 lb N per 1,000 sq ft</strong>. In Cypress, this is NOT your last feeding &mdash; with a mid-December first frost, you can continue feeding through October.</li>
@@ -858,11 +887,15 @@
                     <li><strong>Spot-treat weeds</strong> as needed.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- SEPTEMBER -->
-            <div class="timeline-item">
-                <span class="month-tag">SEPTEMBER</span>
-                <h3>Still Growing Strong</h3>
+        <!-- SEPTEMBER -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">SEPTEMBER</span>
+                <span class="action-title">Still Growing Strong</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Mowing:</strong> In Cypress, Bermuda is still very actively growing in September. Continue mowing every 5&ndash;7 days at 1&ndash;2".</li>
                     <li><strong>Fertilize:</strong> You can still apply <strong>0.5 lb N per 1,000 sq ft</strong>. Bermuda is far from dormancy in the Houston area &mdash; the N cutoff isn't until early November.</li>
@@ -871,11 +904,15 @@
                     <li><strong>Core aeration (if needed):</strong> Late spring/early summer is ideal for Bermuda, but September still works &mdash; the grass is still actively growing and will recover quickly in this climate.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- OCTOBER -->
-            <div class="timeline-item">
-                <span class="month-tag">OCTOBER</span>
-                <h3>Growth Begins to Slow</h3>
+        <!-- OCTOBER -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">OCTOBER</span>
+                <span class="action-title">Growth Begins to Slow</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Mowing:</strong> Bermuda is still green and growing in Cypress through October. Continue mowing every 7&ndash;10 days as growth starts to slow.</li>
                     <li><strong>Light fertilizer (early Oct):</strong> You can still apply a light feeding &mdash; <strong>0.5 lb N per 1,000 sq ft</strong>. The N cutoff for Cypress is early November.</li>
@@ -884,11 +921,15 @@
                     <li><strong>Leaf management:</strong> Mulch or remove fallen leaves. A thick leaf layer smothers Bermuda and traps moisture, encouraging disease.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- NOVEMBER -->
-            <div class="timeline-item">
-                <span class="month-tag">NOVEMBER</span>
-                <h3>Last N Feeding &amp; Wind-Down</h3>
+        <!-- NOVEMBER -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">NOVEMBER</span>
+                <span class="action-title">Last N Feeding &amp; Wind-Down</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Last nitrogen (early November):</strong> Apply a final light feeding of <strong>0.5 lb N per 1,000 sq ft</strong> in early November. This is your N cutoff &mdash; 6 weeks before Cypress's mid-December first frost.</li>
                     <li><strong>Bermuda starts browning:</strong> In Cypress, Bermuda typically starts turning brown in late November or early December. It stays green longer here than in most areas.</li>
@@ -897,11 +938,15 @@
                     <li><strong>Winterize your mower:</strong> Run fuel stabilizer, clean the deck, sharpen blades for next spring.</li>
                 </ul>
             </div>
+        </div>
 
-            <!-- DECEMBER - FEBRUARY -->
-            <div class="timeline-item">
-                <span class="month-tag">MID-DECEMBER &ndash; LATE FEBRUARY</span>
-                <h3>Winter Dormancy (Shorter in Cypress)</h3>
+        <!-- DECEMBER - FEBRUARY -->
+        <div class="action">
+            <div class="action-header">
+                <span class="action-month">MID-DECEMBER &ndash; LATE FEBRUARY</span>
+                <span class="action-title">Winter Dormancy (Shorter in Cypress)</span>
+            </div>
+            <div class="action-body">
                 <ul>
                     <li><strong>Dormancy is shorter here:</strong> In Cypress, Bermuda often stays semi-green well into December in mild years. True dormancy is roughly mid-December through late February &mdash; shorter than most Bermuda regions.</li>
                     <li><strong>Stay off frozen grass</strong> &mdash; hard freezes are less common in Cypress but do happen. Foot traffic on frozen dormant Bermuda can damage crowns.</li>
@@ -909,8 +954,7 @@
                     <li><strong>Optional:</strong> Some homeowners overseed dormant Bermuda with perennial ryegrass for winter green color. This is purely cosmetic and can slightly delay Bermuda's spring green-up.</li>
                 </ul>
             </div>
-
-        </div><!-- end timeline -->
+        </div>
     </section>
 
     <hr class="divider">
@@ -919,10 +963,7 @@
     <!-- FERTILIZER DEEP DIVE -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e8f5e9;">&#127807;</div>
-            <h2 id="fertilizer">Fertilizing Your Bermuda Lawn</h2>
-        </div>
+        <h2 id="fertilizer">Fertilizing Your Bermuda Lawn</h2>
 
         <div class="highlight">
             <strong>Bermuda is a hungry grass.</strong> It needs <strong>2&ndash;4 lbs of actual nitrogen per 1,000 sq ft per year</strong>, split across 5&ndash;6 applications during the growing season (April&ndash;early November in Cypress). The extended growing season in Zone 9a means you can spread feedings out more and keep your lawn green longer.
@@ -1101,10 +1142,7 @@
     <!-- PRODUCT RECOMMENDATIONS -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #c8e6c9;">&#128722;</div>
-            <h2 id="products">Product Recommendations</h2>
-        </div>
+        <h2 id="products">Product Recommendations</h2>
 
         <h3 style="color: var(--green-dark); margin: 24px 0 16px;">Recommended Products</h3>
 
@@ -1146,10 +1184,7 @@
     <!-- WATERING -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e3f2fd;">&#128167;</div>
-            <h2 id="watering">Watering Guide</h2>
-        </div>
+        <h2 id="watering">Watering Guide</h2>
 
         <div class="grid-2">
             <div class="card" style="border-left-color: #1565c0;">
@@ -1181,10 +1216,7 @@
     <!-- AERATION & DETHATCHING -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #e8f5e9;">&#127793;</div>
-            <h2 id="aeration">Aeration &amp; Dethatching</h2>
-        </div>
+        <h2 id="aeration">Aeration &amp; Dethatching</h2>
 
         <div class="highlight warning">
             <strong>Bermuda Builds Thatch Fast.</strong> Because Bermuda grows aggressively via stolons and rhizomes, it accumulates thatch faster than most grasses. If thatch exceeds 0.5 inches, water and nutrients can't reach the soil. Dethatch and aerate regularly.
@@ -1252,10 +1284,7 @@
     <!-- QUICK REFERENCE TABLE -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #fff8e1;">&#9889;</div>
-            <h2 id="summary">Quick-Reference Summary</h2>
-        </div>
+        <h2 id="summary">Quick-Reference Summary</h2>
 
         <div class="table-wrap">
             <table>
@@ -1350,10 +1379,7 @@
     <!-- PROBLEM DIAGNOSIS GUIDE -->
     <!-- ============================================ -->
     <section>
-        <div class="section-header">
-            <div class="icon" style="background: #fce4ec;">&#128269;</div>
-            <h2 id="problems">Lawn Problem Diagnosis &amp; Fixes</h2>
-        </div>
+        <h2 id="problems">Lawn Problem Diagnosis &amp; Fixes</h2>
         <p style="color:#607d8b; margin-bottom: 24px;">See something wrong? Find the symptom below and follow the fix.</p>
 
         <!-- WEEDS -->
